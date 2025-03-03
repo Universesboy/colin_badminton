@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
@@ -7,62 +7,24 @@ import Highlights from './components/pages/Highlights';
 import Training from './components/pages/Training';
 import Achievements from './components/pages/Achievements';
 import Contact from './components/pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: (
-        <>
-          <Navbar />
-          <Home />
-        </>
-      ),
-    },
-    {
-      path: '/highlights',
-      element: (
-        <>
-          <Navbar />
-          <Highlights />
-        </>
-      ),
-    },
-    {
-      path: '/training',
-      element: (
-        <>
-          <Navbar />
-          <Training />
-        </>
-      ),
-    },
-    {
-      path: '/achievements',
-      element: (
-        <>
-          <Navbar />
-          <Achievements />
-        </>
-      ),
-    },
-    {
-      path: '/contact',
-      element: (
-        <>
-          <Navbar />
-          <Contact />
-        </>
-      ),
-    }
-  ], {
-    future: {
-      v7_startTransition: true,
-      v7_relativeSplatPath: true
-    }
-  });
-
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/training' element={<Training />} />
+          <Route path='/achievements' element={<Achievements />} />
+          <Route path='/highlights' element={<Highlights />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
+  );
 }
 
 export default App;
