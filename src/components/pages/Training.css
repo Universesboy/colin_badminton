@@ -1,0 +1,256 @@
+.training-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.training-hero {
+  background: linear-gradient(to right, #1a237e, #0d47a1);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.training-hero h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+}
+
+.training-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.training-intro {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content h2 {
+  color: #1a237e;
+  margin-bottom: 1.5rem;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.training-video-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.training-video-section h2 {
+  text-align: center;
+  color: #1a237e;
+  margin-bottom: 3rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.video-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  cursor: pointer;
+}
+
+.video-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.play-overlay i {
+  color: white;
+  font-size: 4rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.video-wrapper:hover .play-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper:hover .play-overlay i {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.video-caption {
+  padding: 1.5rem;
+}
+
+.video-caption h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1a237e;
+}
+
+.video-caption p {
+  margin: 0;
+  color: #666;
+}
+
+.training-methodology {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.training-methodology h2 {
+  text-align: center;
+  color: #1a237e;
+  margin-bottom: 3rem;
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.methodology-item {
+  text-align: center;
+  padding: 2rem;
+}
+
+.methodology-item i {
+  font-size: 3rem;
+  color: #1a237e;
+  margin-bottom: 1.5rem;
+}
+
+.methodology-item h3 {
+  color: #1a237e;
+  margin-bottom: 1rem;
+}
+
+.methodology-item p {
+  color: #666;
+}
+
+/* Modal Styles */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 100%;
+}
+
+.modal-video {
+  width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+.modal-caption {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0 0 8px 8px;
+  margin-top: -4px;
+}
+
+.modal-caption h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1a237e;
+}
+
+.modal-caption p {
+  margin: 0;
+  color: #666;
+}
+
+.close-button {
+  position: absolute;
+  top: -3rem;
+  right: -3rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .training-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .close-button {
+    top: 1rem;
+    right: 1rem;
+  }
+} 

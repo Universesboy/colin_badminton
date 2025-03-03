@@ -1,0 +1,215 @@
+.contact-container {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  min-height: 100vh;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #242424;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.contact-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #ff3366, #ff6b6b);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.contact-info-card, .contact-qr-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.contact-info-card:hover, .contact-qr-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-info-card h2, .contact-qr-card h2 {
+  color: #242424;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.contact-info-card h2::after, .contact-qr-card h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(45deg, #ff3366, #ff6b6b);
+  border-radius: 2px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.contact-info-item i {
+  font-size: 1.2rem;
+  color: #ff3366;
+  margin-right: 1rem;
+  width: 24px;
+  text-align: center;
+}
+
+.contact-info-item p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.qr-caption {
+  margin-top: 1rem;
+  color: #666;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Social Connect Section */
+.social-connect-section {
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.social-connect-section h2 {
+  margin-bottom: 1.5rem;
+  color: #242424;
+  position: relative;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.social-connect-section h2::after {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(45deg, #ff3366, #ff6b6b);
+  border-radius: 2px;
+}
+
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  color: #242424;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon-link.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+}
+
+.social-icon-link.youtube:hover {
+  background: #ff0000;
+  color: white;
+}
+
+.social-icon-link.x:hover {
+  background: #000;
+  color: white;
+}
+
+.social-icon-link.whatsapp:hover {
+  background: #25d366;
+  color: white;
+}
+
+.social-icon-link.wechat:hover {
+  background: #07c160;
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info-card, .contact-qr-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .contact-heading {
+    font-size: 2rem;
+  }
+  
+  .social-icon-link {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}

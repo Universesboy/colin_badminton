@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans, sans-serif';
+}
+
+.home,
+.highlights,
+.training,
+.contact{
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+.highlights{
+    background-image: url('../public/images/img-8.jpg');
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    font-size: 100px;;
+}
+
+.training{
+    background-image: url('../public/images/img-1.jpg');
+    background-position: center;
+    background-size: fill;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+}
+
+.contact{
+    background-image: url('../public/images/img-3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+}
