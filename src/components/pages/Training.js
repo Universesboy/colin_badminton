@@ -4,11 +4,12 @@ import './Training.css';
 function Training() {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  // Training video data
+  // Training video data with YouTube URLs
   const trainingVideos = [
     {
       id: 1,
-      src: '/videos/footworks.mp4',
+      src: 'https://youtu.be/jfyaLvh-0Nc',
+      youtubeId: 'jfyaLvh-0Nc',
       poster: '/videos/thumbnails/footworks.jpg',
       title: 'Footwork Drills',
       description: 'Essential movement patterns for court coverage',
@@ -16,7 +17,8 @@ function Training() {
     },
     {
       id: 2,
-      src: '/videos/colin.vs.mattew1.mp4',
+      src: 'https://youtu.be/XpX97WJzGpw',
+      youtubeId: 'XpX97WJzGpw',
       poster: '/videos/thumbnails/colin.vs.mattew1.jpg',
       title: 'Smash Technique',
       description: 'Power and precision in overhead attacks',
@@ -24,7 +26,8 @@ function Training() {
     },
     {
       id: 3,
-      src: '/videos/colin.vs.mj2.mp4',
+      src: 'https://youtu.be/lWfaT717nis',
+      youtubeId: 'lWfaT717nis',
       poster: '/videos/thumbnails/colin.vs.mj2.jpg',
       title: 'Defensive Skills',
       description: 'Blocking and returning powerful shots',
@@ -32,7 +35,8 @@ function Training() {
     },
     {
       id: 4,
-      src: '/videos/colin.vs.mj3.mp4',
+      src: 'https://youtu.be/dGH-9FRz5ko',
+      youtubeId: 'dGH-9FRz5ko',
       poster: '/videos/thumbnails/colin.vs.mj3.jpg',
       title: 'Net Play',
       description: 'Control and finesse at the front court',
@@ -40,13 +44,21 @@ function Training() {
     },
     {
       id: 5,
-      src: '/videos/colin.vs.mj5.mp4',
+      src: 'https://youtu.be/awVeUT3e5v0',
+      youtubeId: 'awVeUT3e5v0',
       poster: '/videos/thumbnails/colin.vs.mj5.jpg',
       title: 'Fitness Conditioning',
       description: 'Building stamina and strength for badminton',
       orientation: 'landscape'
     }
   ];
+
+  // Helper function to extract YouTube ID from URL (if needed)
+  const getYoutubeId = (url) => {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+  };
 
   // Handle video selection
   const openVideoModal = (video) => {
@@ -133,19 +145,36 @@ function Training() {
         </div>
       </div>
 
-      {/* Video Modal */}
+      {/* Video Modal - Updated for YouTube Embed */}
       {selectedVideo && (
         <div className="video-modal" onClick={closeVideoModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <video controls autoPlay className="modal-video">
-              <source src={selectedVideo.src} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div className="youtube-responsive-container" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+              <iframe 
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?autoplay=1`}
+                title={selectedVideo.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
             <div className="modal-caption">
               <h3>{selectedVideo.title}</h3>
               <p>{selectedVideo.description}</p>
             </div>
             <button className="close-button" onClick={closeVideoModal}>×</button>
+            <button className="prev-button" onClick={(e) => {
+              e.stopPropagation();
+              const currentIndex = trainingVideos.findIndex(v => v.id === selectedVideo.id);
+              const prevIndex = (currentIndex - 1 + trainingVideos.length) % trainingVideos.length;
+              setSelectedVideo(trainingVideos[prevIndex]);
+            }}>❮</button>
+            <button className="next-button" onClick={(e) => {
+              e.stopPropagation();
+              const currentIndex = trainingVideos.findIndex(v => v.id === selectedVideo.id);
+              const nextIndex = (currentIndex + 1) % trainingVideos.length;
+              setSelectedVideo(trainingVideos[nextIndex]);
+            }}>❯</button>
           </div>
         </div>
       )}
