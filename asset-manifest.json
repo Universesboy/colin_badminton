@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.bfd63f21.css",
-    "main.js": "/static/js/main.e1c26753.js",
-    "static/media/img-3.jpg": "/static/media/img-3.6d683c0ee6824af7961a.jpg",
-    "static/media/img-1.jpg": "/static/media/img-1.53f4843759ebec256cb9.jpg",
-    "static/media/img-8.jpg": "/static/media/img-8.fabdf94dc5be2d3dc707.jpg",
-    "static/media/champion_flag.jpg": "/static/media/champion_flag.7bfb4c535257ad4c4a4d.jpg",
-    "static/media/ocaa_awards.jpg": "/static/media/ocaa_awards.7b251cd6cdd4e3edb245.jpg",
-    "static/media/colin_poster.jpg": "/static/media/colin_poster.3eb3de2643d0941816b5.jpg",
-    "static/media/ocaa.jpg": "/static/media/ocaa.ebc5d1b920bc88c81bb0.jpg",
-    "static/media/wechat-qr.png": "/static/media/wechat-qr.018ac5806a02a825a053.png",
-    "static/media/national_champion.jpg": "/static/media/national_champion.038cc515af9aa6250307.jpg",
-    "static/media/provincial_jump_smash.jpg": "/static/media/provincial_jump_smash.5afc26fe292621c7e99b.jpg",
-    "static/media/frontcourt.jpg": "/static/media/frontcourt.80a211593bde6e7cb53a.jpg",
-    "index.html": "/index.html",
-    "main.bfd63f21.css.map": "/static/css/main.bfd63f21.css.map",
-    "main.e1c26753.js.map": "/static/js/main.e1c26753.js.map"
+    "main.css": "/colin_badminton/static/css/main.caf58e15.css",
+    "main.js": "/colin_badminton/static/js/main.0d58716c.js",
+    "static/media/img-3.jpg": "/colin_badminton/static/media/img-3.6d683c0ee6824af7961a.jpg",
+    "static/media/img-1.jpg": "/colin_badminton/static/media/img-1.53f4843759ebec256cb9.jpg",
+    "static/media/img-8.jpg": "/colin_badminton/static/media/img-8.fabdf94dc5be2d3dc707.jpg",
+    "static/media/champion_flag.jpg": "/colin_badminton/static/media/champion_flag.7bfb4c535257ad4c4a4d.jpg",
+    "static/media/ocaa_awards.jpg": "/colin_badminton/static/media/ocaa_awards.7b251cd6cdd4e3edb245.jpg",
+    "static/media/colin_poster.jpg": "/colin_badminton/static/media/colin_poster.3eb3de2643d0941816b5.jpg",
+    "static/media/ocaa.jpg": "/colin_badminton/static/media/ocaa.ebc5d1b920bc88c81bb0.jpg",
+    "static/media/wechat-qr.png": "/colin_badminton/static/media/wechat-qr.018ac5806a02a825a053.png",
+    "static/media/national_champion.jpg": "/colin_badminton/static/media/national_champion.038cc515af9aa6250307.jpg",
+    "static/media/provincial_jump_smash.jpg": "/colin_badminton/static/media/provincial_jump_smash.5afc26fe292621c7e99b.jpg",
+    "static/media/frontcourt.jpg": "/colin_badminton/static/media/frontcourt.80a211593bde6e7cb53a.jpg",
+    "index.html": "/colin_badminton/index.html",
+    "main.caf58e15.css.map": "/colin_badminton/static/css/main.caf58e15.css.map",
+    "main.0d58716c.js.map": "/colin_badminton/static/js/main.0d58716c.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfd63f21.css",
-    "static/js/main.e1c26753.js"
+    "static/css/main.caf58e15.css",
+    "static/js/main.0d58716c.js"
   ]
 }
