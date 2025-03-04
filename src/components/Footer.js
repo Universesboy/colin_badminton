@@ -77,7 +77,7 @@ function Footer() {
             </Link>
             <a
               className='social-icon-link whatsapp'
-              href='https://wa.me/1234567890'
+              href='https://wa.me/6476556636'
               target='_blank'
               rel='noopener noreferrer'
               aria-label='WhatsApp'
@@ -86,7 +86,7 @@ function Footer() {
             </a>
             <a
               className='social-icon-link wechat'
-              href='weixin://dl/chat?1234567890'
+              href='weixin://dl/chat?ColinZhouzky'
               target='_blank'
               rel='noopener noreferrer'
               aria-label='WeChat'

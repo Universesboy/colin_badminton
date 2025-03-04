@@ -1,163 +1,200 @@
 .footer-container {
-    background-color: #242424;
-    padding: 4rem 0 2rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer-subscription {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  
-    margin-bottom: 24px;
-    padding: 24px;
-    color: #fff;
-  }
-  
-  .footer-subscription > p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-      'Lucida Sans', Arial, sans-serif;
-  }
-  
-  .footer-subscription-heading {
-    margin-bottom: 24px;
-    font-size: 24px;
-  }
-  
-  .footer-subscription-text {
-    margin-bottom: 24px;
-    font-size: 20px;
-  }
-  
-  .footer-input {
-    padding: 8px 20px;
-    border-radius: 2px;
-    margin-right: 10px;
-    outline: none;
-    border: none;
-    font-size: 18px;
-    margin-bottom: 16px;
-    border: 1px solid #fff;
-  }
-  
+  background-color: #242424;
+  padding: 4rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-bottom: 24px;
+  padding: 24px;
+  color: #fff;
+}
+
+.footer-subscription > p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.footer-subscription-heading {
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.footer-subscription-text {
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+.footer-input {
+  padding: 8px 20px;
+  border-radius: 2px;
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 16px;
+  border: 1px solid #fff;
+}
+
+.footer-links {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link-wrapper {
+  display: flex;
+}
+
+.footer-link-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 16px;
+  text-align: left;
+  width: 160px;
+  box-sizing: border-box;
+}
+
+.footer-link-items h2 {
+  margin-bottom: 16px;
+}
+
+.footer-link-items > h2 {
+  color: #fff;
+}
+
+.footer-link-items a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link-items a:hover {
+  color: #e9e9e9;
+  transition: 0.3s ease-out;
+}
+
+.footer-email-form h2 {
+  margin-bottom: 2rem;
+}
+
+.footer-input::placeholder {
+  color: #b1b1b1;
+}
+
+/* Social Icons */
+.social-icon-link {
+  color: #242424;
+  font-size: 24px;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-icon-link:hover {
+  transform: translateY(-5px);
+}
+
+.social-icon-link.instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+}
+
+.social-icon-link.youtube:hover {
+  background: #ff0000;
+  color: white;
+}
+
+.social-icon-link.x:hover {
+  background: #000;
+  color: white;
+}
+
+.social-icon-link.whatsapp:hover {
+  background: #25d366;
+  color: white;
+}
+
+.social-icon-link.wechat:hover {
+  background: #07c160;
+  color: white;
+}
+
+.social-media {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.social-media-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+.social-logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.website-rights {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 820px) {
   .footer-links {
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    justify-content: center;
+    padding-top: 2rem;
   }
-  
+
+  .footer-input {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
   .footer-link-wrapper {
-    display: flex;
-  }
-  
-  .footer-link-items {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin: 16px;
-    text-align: left;
-    width: 160px;
-    box-sizing: border-box;
   }
-  
-  .footer-link-items h2 {
-    margin-bottom: 16px;
-  }
-  
-  .footer-link-items > h2 {
-    color: #fff;
-  }
-  
-  .footer-link-items a {
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-  }
-  
-  .footer-link-items a:hover {
-    color: #e9e9e9;
-    transition: 0.3s ease-out;
-  }
-  
-  .footer-email-form h2 {
-    margin-bottom: 2rem;
-  }
-  
-  .footer-input::placeholder {
-    color: #b1b1b1;
-  }
-  
-  /* Social Icons */
-  .social-icon-link {
-    color: #fff;
-    font-size: 24px;
-  }
-  
-  .social-media {
-    max-width: 1000px;
-    width: 100%;
-  }
-  
+
   .social-media-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1000px;
-    margin: 40px auto 0 auto;
+    flex-direction: column;
   }
-  
-  .social-icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 240px;
-  }
-  
-  .social-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .website-rights {
-    color: #fff;
-    margin-bottom: 16px;
-  }
-  
-  @media screen and (max-width: 820px) {
-    .footer-links {
-      padding-top: 2rem;
-    }
-  
-    .footer-input {
-      width: 100%;
-    }
-  
-    .btn {
-      width: 100%;
-    }
-  
-    .footer-link-wrapper {
-      flex-direction: column;
-    }
-  
-    .social-media-wrap {
-      flex-direction: column;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-  }
+}
+
+@media screen and (max-width: 768px) {
+}

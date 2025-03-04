@@ -1,6 +1,5 @@
 import React from 'react';
 import './Contact.css';
-import Footer from '../Footer';
 import wechatQR from '../assets/wechat-qr.png'; // Make sure this path is correct
 
 function Contact() {
@@ -85,7 +84,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
