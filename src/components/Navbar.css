@@ -8,6 +8,8 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    transition: all 0.3s ease;
+    box-shadow: none;
   }
   
   .navbar-container {
@@ -154,4 +156,10 @@
       color: #242424;
       transition: 250ms;
     }
+  }
+
+  .navbar-scrolled {
+    background: rgba(26, 35, 126, 0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
   }

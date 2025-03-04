@@ -2,8 +2,13 @@ import React from 'react';
 import './Footer.css';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import { scrollToTop } from '../utils/scrollUtils';
 
 function Footer() {
+  const handleNavClick = () => {
+    scrollToTop(0);
+  };
+
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -29,22 +34,23 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/training'>Training Philosophy</Link>
-            <Link to='/achievements'>Achievements</Link>
+            <Link to='/training' onClick={handleNavClick}>Training Philosophy</Link>
+            <Link to='/achievements' onClick={handleNavClick}>Achievements</Link>
+            <Link to='/highlights' onClick={handleNavClick}>Highlights</Link>  
           </div>
           <div className='footer-link-items'>
             <h2>Contact Us</h2>
             <a href='https://wa.me/6476556636' target='_blank' rel='noopener noreferrer'>WhatsApp: +647 655 6636</a>
             <a href='weixin://dl/chat?ColinZhouzky' target='_blank' rel='noopener noreferrer'>WeChat: ColinZhouzky</a>
             <a href='mailto:zhoukeyu123456@gmail.com'>Email: zhoukeyu123456@gmail.com</a>
-            <Link to='/contact'>Contact Page</Link>
+            <Link to='/contact' onClick={handleNavClick}>Contact Page</Link>
           </div>
         </div>
       </div>
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
-            <Link to='/' className='social-logo'>
+            <Link to='/' className='social-logo' onClick={handleNavClick}>
               Colin Badminton
               <i className='fab fa-typo3' />
             </Link>

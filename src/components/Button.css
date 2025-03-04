@@ -1,6 +1,16 @@
 :root {
+    /* Current primary color is white (#fff) */
     --primary: #fff;
-}
+    /* Add a consistent color palette */
+    --primary-blue: #1a237e;
+    --secondary-blue: #0d47a1;
+    --accent: #ff5722;
+    --light-bg: #f8f9fa;
+    --dark-bg: #242424;
+    --text-dark: #333;
+    --text-light: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 .btn {
     padding: 8px 20px;
     border-radius: 4px;

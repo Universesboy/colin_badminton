@@ -8,16 +8,17 @@ function HeroSection() {
   return (
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>BAMINTON JOURNEY</h1>
-      <p>What are you waiting for?</p>
+      <div className="hero-overlay"></div>
+      <h1>COLIN BADMINTON</h1>
+      <p>National Champion & Professional Coach</p>
       <div className='hero-btns'>
         <Button
-          path='/highlights'
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
+          path='/highlights'
         >
-          WATCH THE HIGHLIGHTS <i className='far fa-play-circle' />
+          WATCH HIGHLIGHTS <i className='far fa-play-circle' />
         </Button>
         <Button
           path='/training'
@@ -35,6 +36,22 @@ function HeroSection() {
         >
           ACHIVEMENTS 
         </Button>
+        <Button
+          path='/contact'
+          className='btns'
+          buttonStyle='btn--primary'
+          buttonSize='btn--large'
+        >
+          CONTACT  
+        </Button>
+      </div>
+      <div className="scroll-indicator">
+        <div className="mouse">
+          <div className="wheel"></div>
+        </div>
+        <div>
+          <span className="scroll-arrow"></span>
+        </div>
       </div>
     </div>
   );

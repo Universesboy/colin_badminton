@@ -1,13 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --primary-blue: #1a237e;
+  --secondary-blue: #0d47a1;
+  --accent: #ff5722;
+  --light-bg: #f8f9fa;
+  --dark-bg: #242424;
+  --text-dark: #333;
+  --text-light: #fff;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  /* Add dark mode variables */
+  --dark-primary: #121212;
+  --dark-secondary: #1e1e1e;
+  --dark-accent: #bb86fc;
+  --dark-text: #e0e0e0;
+  --dark-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+body.dark-mode {
+  background-color: var(--dark-primary);
+  color: var(--dark-text);
+}
+
+/* Add dark mode styles for various components */
+body.dark-mode .navbar {
+  background: linear-gradient(90deg, #121212 0%, #1e1e1e 100%);
+}
+
+body.dark-mode .cards {
+  background: var(--dark-secondary);
+}
+
+body.dark-mode .footer-container {
+  background: linear-gradient(to right, #121212, #1e1e1e);
+}
+
+/* Add more dark mode styles for other components */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.3px;
 }

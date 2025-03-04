@@ -1,11 +1,14 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import { Button } from './Button'
+import { ThemeContext } from '../context/ThemeContext'
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -18,16 +21,25 @@ function Navbar() {
     }
   }
 
-
   useEffect(() => {
     showButton();
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   window.addEventListener('resize', showButton);
 
   return (
     <>
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
         <div className="navbar-container">
          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}> 
          Colin Badminton <i className='fab fa-typo3'></i>
@@ -63,7 +75,9 @@ function Navbar() {
           </li>
         </ul>
         
-
+        <button className="theme-toggle" onClick={toggleDarkMode}>
+          {darkMode ? <i className="fas fa-sun" /> : <i className="fas fa-moon" />}
+        </button>
         </div>
     </nav>
 

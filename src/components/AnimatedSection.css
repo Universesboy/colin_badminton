@@ -1,0 +1,34 @@
+.animated-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animated-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-section.fade-left {
+  transform: translateX(-30px);
+}
+
+.animated-section.fade-left.visible {
+  transform: translateX(0);
+}
+
+.animated-section.fade-right {
+  transform: translateX(30px);
+}
+
+.animated-section.fade-right.visible {
+  transform: translateX(0);
+}
+
+.animated-section.zoom-in {
+  transform: scale(0.95);
+}
+
+.animated-section.zoom-in.visible {
+  transform: scale(1);
+}

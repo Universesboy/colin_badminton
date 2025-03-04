@@ -1,28 +1,32 @@
-
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import './App.css';
-import Home from './components/pages/Home';
-import Highlights from './components/pages/Highlights';
-import Training from './components/pages/Training';
-import Achievements from './components/pages/Achievements';
-import Contact from './components/pages/Contact';
-import Footer from './components/Footer';
+import LoadingSpinner from './components/LoadingSpinner';
+
+// Lazy load page components
+const Home = lazy(() => import('./components/pages/Home'));
+const Highlights = lazy(() => import('./components/pages/Highlights'));
+const Training = lazy(() => import('./components/pages/Training'));
+const Achievements = lazy(() => import('./components/pages/Achievements'));
+const Contact = lazy(() => import('./components/pages/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/training' element={<Training />} />
-          <Route path='/achievements' element={<Achievements />} />
-          <Route path='/highlights' element={<Highlights />} />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
-        <Footer />
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/highlights' element={<Highlights />} />
+            <Route path='/training' element={<Training />} />
+            <Route path='/achievements' element={<Achievements />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
+          <Footer />
+        </Suspense>
       </Router>
     </>
   );
