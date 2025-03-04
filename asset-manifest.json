@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5abe194d.css",
-    "main.js": "/static/js/main.8f76a494.js",
+    "main.css": "/static/css/main.412f1e11.css",
+    "main.js": "/static/js/main.e0cbbded.js",
     "static/media/img-3.jpg": "/static/media/img-3.6d683c0ee6824af7961a.jpg",
     "static/media/img-1.jpg": "/static/media/img-1.53f4843759ebec256cb9.jpg",
     "static/media/img-8.jpg": "/static/media/img-8.fabdf94dc5be2d3dc707.jpg",
@@ -14,11 +14,11 @@
     "static/media/provincial_jump_smash.jpg": "/static/media/provincial_jump_smash.5afc26fe292621c7e99b.jpg",
     "static/media/frontcourt.jpg": "/static/media/frontcourt.80a211593bde6e7cb53a.jpg",
     "index.html": "/index.html",
-    "main.5abe194d.css.map": "/static/css/main.5abe194d.css.map",
-    "main.8f76a494.js.map": "/static/js/main.8f76a494.js.map"
+    "main.412f1e11.css.map": "/static/css/main.412f1e11.css.map",
+    "main.e0cbbded.js.map": "/static/js/main.e0cbbded.js.map"
   },
   "entrypoints": [
-    "static/css/main.5abe194d.css",
-    "static/js/main.8f76a494.js"
+    "static/css/main.412f1e11.css",
+    "static/js/main.e0cbbded.js"
   ]
 }
