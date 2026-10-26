@@ -1,0 +1,164 @@
+.home-stats {
+  padding-bottom: var(--space-8);
+}
+
+/* The athlete */
+.home-athlete__grid {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .home-athlete__grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: var(--space-9);
+  }
+}
+
+.home-athlete__photo {
+  aspect-ratio: 2 / 3;
+  max-width: 520px;
+  width: 100%;
+}
+
+.home-athlete__photo img {
+  object-position: 60% 40%;
+}
+
+.home-athlete__copy {
+  display: grid;
+  gap: var(--space-6);
+  align-content: start;
+}
+
+.home-athlete__copy .h2 {
+  margin-top: var(--space-4);
+  max-width: 12ch;
+}
+
+.honour-list {
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.honour {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--border);
+}
+
+.honour__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--accent);
+}
+
+.honour h3 {
+  font-size: 1.5rem;
+}
+
+.honour p {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+  margin-top: 2px;
+}
+
+.home-athlete .link-arrow {
+  justify-self: start;
+}
+
+/* Featured videos */
+.home-featured {
+  display: grid;
+  gap: var(--space-7) var(--space-5);
+}
+
+@media (min-width: 760px) {
+  .home-featured {
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    align-items: end;
+  }
+}
+
+.home-more {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.section--stage .link-arrow {
+  color: var(--stage-text);
+}
+
+/* Award strip: a row on desktop, a swipeable rail on small screens */
+.home-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(240px, 1fr);
+  gap: var(--space-4);
+  padding-inline: var(--gutter);
+  max-width: calc(var(--max-width));
+  margin-inline: auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.home-strip::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  .home-strip {
+    grid-auto-columns: 72%;
+  }
+}
+
+.home-strip__item {
+  aspect-ratio: 3 / 4;
+  scroll-snap-align: start;
+}
+
+/* The coach */
+.home-coach {
+  display: grid;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .home-coach {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: var(--space-9);
+  }
+}
+
+.home-coach__copy {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.home-coach__photo {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  max-width: 460px;
+  justify-self: end;
+}
+
+.home-coach__photo img {
+  object-position: 50% 20%;
+}
+
+.home-teaching {
+  margin-top: var(--space-9);
+}

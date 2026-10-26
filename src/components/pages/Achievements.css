@@ -1,344 +1,136 @@
-.achievements-container {
-  min-height: 100vh;
-  padding: 80px 0;
-  background: #f8f9fa;
-}
-
-.achievements-hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(to right, #1a237e, #0d47a1);
-  color: white;
-  margin-bottom: 40px;
-}
-
-.achievements-hero h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.achievements-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.achievements-section {
-  margin-bottom: 60px;
-}
-
-.achievements-section h2 {
-  text-align: center;
-  color: #1a237e;
-  margin-bottom: 40px;
-  font-size: 2.2rem;
-}
-
-.achievement-cards {
+.award {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: var(--space-3);
+  align-content: start;
+  padding: var(--space-6) var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
 }
 
-.achievement-card {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.achievement-card:hover {
-  transform: translateY(-5px);
-}
-
-.achievement-card i {
-  font-size: 2.5rem;
-  color: #1a237e;
-  margin-bottom: 20px;
-}
-
-.achievement-card h3 {
-  color: #1a237e;
-  margin-bottom: 15px;
-}
-
-.experience-timeline {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.experience-item {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.experience-item h3 {
-  color: #1a237e;
-  margin-bottom: 10px;
-}
-
-.philosophy-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.philosophy-card {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.philosophy-card:hover {
-  transform: translateY(-5px);
-}
-
-.philosophy-card i {
-  font-size: 2.5rem;
-  color: #1a237e;
-  margin-bottom: 20px;
-}
-
-.philosophy-card h3 {
-  color: #1a237e;
-  margin-bottom: 15px;
-}
-
-.gallery-section {
-  padding: 4rem 2rem;
-  background: #f8f9fa;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  aspect-ratio: 3/2;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-.gallery-item::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover::after {
-  opacity: 0.9;
-}
-
-.gallery-item-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px;
-  color: white;
-  z-index: 1;
-  transform: translateY(5px);
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover .gallery-item-caption {
-  transform: translateY(0);
-}
-
-.gallery-caption {
-  padding: 1.5rem;
-  background: white;
-}
-
-.gallery-caption h3 {
-  margin: 0 0 0.5rem 0;
-  color: #1a237e;
-  font-size: 1.1rem;
-}
-
-.gallery-caption p {
-  margin: 0;
-  color: #666;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.hover-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.hover-overlay span {
-  color: white;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  border: 2px solid white;
-  border-radius: 4px;
-}
-
-.gallery-item:hover .hover-overlay {
-  opacity: 1;
-}
-
-/* Featured Item Styles */
-.featured-item {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-/* Modal Styles */
-.image-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  padding: 2rem;
-}
-
-.modal-content {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-image-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.modal-image-container img {
-  max-width: 100%;
-  max-height: 80vh;
-  object-fit: contain;
-}
-
-.modal-caption {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 0 0 8px 8px;
-}
-
-.close-button,
-.prev-button,
-.next-button {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 1rem;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-}
-
-.close-button {
-  top: -3rem;
-  right: -3rem;
-}
-
-.prev-button {
-  left: -3rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.next-button {
-  right: -3rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.close-button:hover,
-.prev-button:hover,
-.next-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 1200px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (hover: hover) {
+  .award:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
   }
-  
-  .featured-item {
+}
+
+.award__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+
+.award h3 {
+  font-size: var(--fs-h3);
+}
+
+.award p {
+  color: var(--text-muted);
+  font-size: var(--fs-small);
+}
+
+.achievements-coaching {
+  display: grid;
+  gap: var(--space-7);
+}
+
+@media (min-width: 960px) {
+  .achievements-coaching {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--space-9);
+  }
+}
+
+.achievements-coaching .h2 {
+  margin-top: var(--space-4);
+}
+
+.achievements-coaching .timeline__item::before {
+  box-shadow: 0 0 0 4px var(--stage-bg);
+}
+
+/* Gallery: editorial mosaic on desktop, two columns on phones */
+.achievement-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-4);
+}
+
+@media (min-width: 960px) {
+  .achievement-gallery {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: var(--space-7) var(--space-5);
+  }
+  .achievement-gallery__item {
     grid-column: span 2;
   }
+  .achievement-gallery__item--3,
+  .achievement-gallery__item--4,
+  .achievement-gallery__item--5,
+  .achievement-gallery__item--6 {
+    grid-column: span 3;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+.achievement-gallery__item {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+}
+
+.achievement-gallery__item .frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  padding: 0;
+}
+
+@media (min-width: 960px) {
+  .achievement-gallery__item--3 .frame,
+  .achievement-gallery__item--4 .frame {
+    aspect-ratio: 4 / 3;
   }
-  
-  .featured-item {
-    grid-column: span 1;
+  .achievement-gallery__item--5 .frame,
+  .achievement-gallery__item--6 .frame {
+    aspect-ratio: 1 / 1;
   }
-  
-  .close-button {
-    top: 1rem;
-    right: 1rem;
+  .achievement-gallery__item--5 img,
+  .achievement-gallery__item--6 img {
+    object-position: 50% 20%;
   }
-  
-  .prev-button,
-  .next-button {
-    display: none;
+}
+
+.achievement-gallery__item img {
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .achievement-gallery__item .frame:hover img {
+    transform: scale(1.04);
   }
-} 
+}
+
+.achievement-gallery__item figcaption {
+  display: grid;
+  gap: 2px;
+  font-size: var(--fs-small);
+}
+
+.achievement-gallery__item figcaption strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.achievement-gallery__item figcaption span {
+  color: var(--text-muted);
+}
