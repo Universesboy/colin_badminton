@@ -9,7 +9,9 @@ export function usePageMeta(title, description) {
     if (description) {
       document.querySelector('meta[name="description"]')?.setAttribute('content', description);
     }
-    document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://colinbadminton.com${window.location.pathname}`);
+    // Drop trailing slashes so /contact/ and /contact share one canonical URL
+    const path = window.location.pathname.replace(/\/+$/, '') || '/';
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://colinbadminton.com${path}`);
   }, [title, description]);
 }
 
