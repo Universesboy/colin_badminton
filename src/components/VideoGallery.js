@@ -2,9 +2,11 @@ import React, { useCallback, useState } from 'react';
 import Icon from './Icon';
 import Modal from './Modal';
 import AnimatedSection from './AnimatedSection';
+import { formatDate, formatDuration, formatViews, statsFor } from './videoStats';
 import './VideoGallery.css';
 
 export function VideoCard({ video, onOpen, size = 'md', showCategory = false, index = 0 }) {
+  const stats = statsFor(video.id);
   return (
     <AnimatedSection as="article" className={`video-card video-card--${size}`} delay={(index % 3) * 80}>
       <button
@@ -19,10 +21,16 @@ export function VideoCard({ video, onOpen, size = 'md', showCategory = false, in
         </span>
         {showCategory && <span className="video-card__tag">{video.category}</span>}
         {video.orientation === 'portrait' && <span className="video-card__format">Short</span>}
+        {stats?.duration > 0 && <span className="video-card__duration">{formatDuration(stats.duration)}</span>}
       </button>
       <div className="video-card__meta">
         <h3>{video.title}</h3>
         {video.description && <p>{video.description}</p>}
+        {stats && (
+          <p className="video-card__stats">
+            {formatViews(stats.views)} · {formatDate(stats.publishedAt)}
+          </p>
+        )}
       </div>
     </AnimatedSection>
   );

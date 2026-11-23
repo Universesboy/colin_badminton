@@ -23,3 +23,19 @@
 .training-intro__text p:not(.lead) {
   color: var(--text-muted);
 }
+
+.training-videos-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-5);
+}
+
+.training-videos-head {
+  margin-bottom: var(--space-8);
+}
+
+.training-videos-head .section-head {
+  margin-bottom: 0;
+}

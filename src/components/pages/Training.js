@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageHeader, { usePageMeta } from '../PageHeader';
 import AnimatedSection from '../AnimatedSection';
 import VideoGallery from '../VideoGallery';
+import VideoSort from '../VideoSort';
+import { sortVideos } from '../videoStats';
 import { methodology, trainingVideos } from '../../data/site';
 import './Training.css';
 
 function Training() {
   usePageMeta('Training Programs', 'Badminton training videos and methodology from coach Colin Zhou: footwork, smash technique, defence, net play and conditioning.');
+  const [sort, setSort] = useState('default');
 
   return (
     <>
@@ -36,13 +39,16 @@ function Training() {
 
       <section className="section section--stage" aria-labelledby="videos-title">
         <div className="container">
-          <AnimatedSection className="section-head">
-            <p className="eyebrow">Watch</p>
-            <h2 id="videos-title" className="h2">
-              Training Videos
-            </h2>
-          </AnimatedSection>
-          <VideoGallery videos={trainingVideos} />
+          <div className="training-videos-head">
+            <AnimatedSection className="section-head">
+              <p className="eyebrow">Watch</p>
+              <h2 id="videos-title" className="h2">
+                Training Videos
+              </h2>
+            </AnimatedSection>
+            <VideoSort id="training-sort" value={sort} onChange={setSort} />
+          </div>
+          <VideoGallery key={sort} videos={sortVideos(trainingVideos, sort)} />
         </div>
       </section>
 

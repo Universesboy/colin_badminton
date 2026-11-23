@@ -3,6 +3,8 @@ import PageHeader, { usePageMeta } from '../PageHeader';
 import AnimatedSection from '../AnimatedSection';
 import VideoGallery from '../VideoGallery';
 import Icon from '../Icon';
+import VideoSort from '../VideoSort';
+import { sortVideos } from '../videoStats';
 import { careerStats, highlightVideos, honours, videoCategories } from '../../data/site';
 import './Highlights.css';
 
@@ -11,7 +13,11 @@ const featured = highlightVideos.filter((v) => v.featured);
 function Highlights() {
   usePageMeta('Career Highlights', 'Match and tournament highlights of Colin Zhou: CCAA National Championships, OCAA Finals, Ontario Provincial Championships and more.');
   const [category, setCategory] = useState('all');
-  const filtered = category === 'all' ? highlightVideos : highlightVideos.filter((v) => v.category === category);
+  const [sort, setSort] = useState('default');
+  const filtered = sortVideos(
+    category === 'all' ? highlightVideos : highlightVideos.filter((v) => v.category === category),
+    sort
+  );
 
   return (
     <>
@@ -56,11 +62,12 @@ function Highlights() {
                 </button>
               ))}
             </div>
+            <VideoSort value={sort} onChange={setSort} />
           </div>
           <p className="sr-only" aria-live="polite">
             Showing {filtered.length} videos
           </p>
-          <VideoGallery key={category} videos={filtered} showCategory />
+          <VideoGallery key={`${category}-${sort}`} videos={filtered} showCategory />
         </div>
       </section>
 
