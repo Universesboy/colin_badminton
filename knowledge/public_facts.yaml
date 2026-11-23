@@ -1,0 +1,41 @@
+# The ONLY source for honours, results and coaching history used in public copy.
+# Copied from colinbadminton.com (src/data/site.js) on 2026-11-23.
+# Update this file only from the live site or from Colin directly.
+source: https://colinbadminton.com (src/data/site.js)
+checked: 2026-11-23
+name: Colin Zhou
+chinese_name: null   # not published on the site; ask Colin before using one
+brand: Colin Badminton
+tagline: National Champion & Professional Coach
+summary: "2023 CCAA Men's Singles National Champion, former Sichuan Provincial Team player and senior badminton coach."
+competition:
+  - CCAA Champion — Men's Singles Champion in Canadian Collegiate Athletic Association (2023)
+  - OCAA Champion — Men's Singles Champion in Ontario Collegiate Athletic Association
+  - Provincial Team Member — Former Sichuan Provincial Team Player
+  - Youth Champion — Multiple-time Sichuan Province Youth Badminton Champion
+honours_as_listed:
+  - "1st CCAA National Ranking"
+  - "2023 National Champion"
+  - "OCAA Player of the Year"
+  - "10+ Major Championships"
+  - "OCAA Regional All-Star (gallery caption: Player of the Year & Regional All-Star Awards)"
+  - "China Provincial Champion"
+coaching:
+  - Over 5 years of coaching experience (Canada)
+  - Trained 10+ Canadian National level players (U13-U19)
+  - Senior coach at provincial badminton clubs
+  - Participated in training with multiple Canadian Olympic athletes
+teaching: [Bilingual instruction (English and Chinese), Detailed analysis, Continuous support]
+channels:
+  website: https://colinbadminton.com
+  youtube: https://www.youtube.com/@zhoukeyu9105
+  instagram: https://www.instagram.com/zhou.keyu.5
+  x: https://x.com/Colin_Tesla999T
+# Allowed Chinese renderings (translation of the above, not new claims):
+zh_terms:
+  CCAA: 加拿大大学体育联盟（CCAA）
+  OCAA: 安大略省大学体育联盟（OCAA）
+  champion: 冠军
+  national champion: 全国冠军
+  provincial team: 四川省队
+  player of the year: 年度最佳球员

@@ -1,0 +1,45 @@
+1
+00:00:00,200 --> 00:00:03,000
+回合 1：底线相持
+Rally 1: baseline exchange
+
+2
+00:00:15,800 --> 00:00:18,600
+大步上网接前场球
+Deep lunge to the front court
+
+3
+00:00:23,700 --> 00:00:26,500
+回合 2：20 秒多拍
+Rally 2: a 20-second rally
+
+4
+00:00:34,900 --> 00:00:37,500
+低重心救球
+Low lunge to keep the rally alive
+
+5
+00:00:45,700 --> 00:00:48,500
+回合 3：前后场调动
+Rally 3: front and back
+
+6
+00:00:58,200 --> 00:01:01,000
+回合 4
+Rally 4
+
+7
+00:01:03,400 --> 00:01:05,900
+后场起跳击球
+Jump overhead from the rear court
+
+8
+00:01:15,700 --> 00:01:18,300
+回合 5
+Rally 5
+
+9
+00:01:18,600 --> 00:01:21,000
+再次起跳
+Another jump overhead
+

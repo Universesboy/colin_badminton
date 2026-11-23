@@ -1,0 +1,10 @@
+{
+  "long": {
+    "lines": 9,
+    "subtitled": "renders/long_subtitled.mp4"
+  },
+  "short": {
+    "lines": 6,
+    "subtitled": "renders/short_subtitled.mp4"
+  }
+}

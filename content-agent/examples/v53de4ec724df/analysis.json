@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "analyst": "claude (agent mode), from 4 overview sheets (one frame every 36 s) and rally sheets for 7 of 52 rally candidates, plus full-resolution frames around 23:09-23:12",
+  "video_types": ["A_match"],
+  "type_reasoning": "Singles match on a court with a seated umpire in a chair (visible all match, e.g. 23:10), VICTOR court mats and banners, other courts in play behind. Players change ends between ~16:23 and ~17:00 (white/red shirt near the camera before, pink shirt after), consistent with a game break. No coaching speech.",
+  "summary": {
+    "zh": "一段 29 分钟的单打比赛完整录像，DJI 相机放在近端底线后方地面，广角固定机位。近端球员上半段为白红色上衣，约 16:23–17:00 交换场地后为粉色上衣。录像里能看到多个 15–20 秒的长回合、近端球员的大步上网和后场起跳击球。无法从画面确认比分、赛事名称和哪位球员是 Colin。",
+    "en": "A 29-minute full recording of a singles match from a DJI camera on the floor behind the near baseline (wide angle, fixed). The near-side player wears a white/red shirt until the players change ends at about 16:23-17:00, then a pink shirt. Several 15-20 s rallies, deep forward lunges and jump overheads by the near player are visible. The score, the event and which player is Colin cannot be confirmed from the footage."
+  },
+  "subject": {
+    "who_is_colin": "unknown — two candidates: the white/red-shirt player (near side 0:00-16:20, far side after) or the pink-shirt player (far side first, near side from ~17:00)",
+    "confidence": "low"
+  },
+  "people_and_privacy": {
+    "other_people_visible": true,
+    "possible_minors": true,
+    "names_or_contacts_visible": false,
+    "private_location_risk": false,
+    "notes": "The opponent's face is clearly visible when he walks toward the camera (e.g. 4:21-4:23, 14:48). The umpire and people on neighbouring courts are visible in the background throughout; some look young but are too small to identify. Background chatter picked up by the microphone is not used anywhere."
+  },
+  "camera_and_limits": [
+    "Fixed wide-angle (fisheye-like) camera on the floor behind the near baseline; strong barrel distortion at the edges",
+    "Far-side player is small (~60-80 px tall): grip, racket face, contact point and footwork details of the far player are not visible",
+    "Near player: body, lunges and jumps visible; racket face, grip and exact contact point mostly not visible from behind",
+    "Shuttle is rarely visible in flight, so shot types (smash vs clear vs drop) cannot be confirmed from most frames",
+    "Rally boundaries come from automatic motion detection plus visual review of 7 rallies; the other 45 candidates are unverified",
+    "Camera clock says 2026-04-04 07:27 local; not confirmed"
+  ],
+  "key_moments": [
+    {"start": 237.0, "end": 260.5, "kind": "rally", "title": {"zh": "长回合：后场击球后大步上网", "en": "Long rally: rear-court overheads then a deep lunge forward"}, "what_happens": "Near player (white/red) plays overheads from the rear court (4:02-4:06), lunges deep toward the front court (4:14) and returns to a wide ready stance (4:19).", "importance": 4, "uses": ["long", "short"], "short_suitable": true},
+    {"start": 670.0, "end": 692.0, "kind": "rally", "title": {"zh": "20 秒多拍相持", "en": "20-second rally"}, "what_happens": "Near player (white/red) moves rear-left and rear-right, makes a low lunge at mid-court left (11:22) and an overhead (11:25); rally continues to about 11:31.", "importance": 4, "uses": ["long", "short"], "short_suitable": true},
+    {"start": 875.5, "end": 888.0, "kind": "rally", "title": {"zh": "前后场调动", "en": "Front-and-back exchange"}, "what_happens": "Near player (white/red) plays from the rear court (14:37-14:43) and moves forward (14:45-14:47); afterwards he walks to the right sideline where a shuttle lies on the floor (14:50).", "importance": 3, "uses": ["long"], "short_suitable": false},
+    {"start": 1385.5, "end": 1399.0, "kind": "rally", "title": {"zh": "后场起跳击球", "en": "Jump overhead from the rear court"}, "what_happens": "Near player (pink) leaves the ground for an overhead at the rear left (about 23:11.8), lands in a split/scissor position (23:12.1) and keeps playing until about 23:18.", "importance": 5, "uses": ["long", "short", "thumbnail"], "short_suitable": true},
+    {"start": 1661.5, "end": 1669.5, "kind": "rally", "title": {"zh": "再次后场起跳", "en": "Another jump overhead"}, "what_happens": "Near player (pink) jumps for an overhead at about 27:46, then moves forward toward the net (27:49).", "importance": 3, "uses": ["long", "short"], "short_suitable": true},
+    {"start": 983.0, "end": 1020.0, "kind": "turning_point", "title": {"zh": "交换场地", "en": "Players change ends"}, "what_happens": "Play stops; people stand at the right side of the court (16:23, 16:59). After this the pink-shirt player is on the near side.", "importance": 2, "uses": [], "short_suitable": false}
+  ],
+  "technical_observations": [
+    {"dimension": "footwork.ready_stance", "observation": "White/red near player waits in a wide, low stance in the rear half between shots.", "timestamps": [239.2, 248.9, 258.5], "basis": "observed", "confidence": "medium", "visibility_limits": "Seen from behind; weight distribution and split-step timing cannot be measured at 2-3 frames per second."},
+    {"dimension": "footwork.lunge", "observation": "White/red near player makes long forward lunges toward the front court within long rallies.", "timestamps": [253.7, 682.2], "basis": "observed", "confidence": "medium", "visibility_limits": "Front foot and knee angle are partly hidden by the body from this angle."},
+    {"dimension": "rear_court.jump_overhead", "observation": "Pink near player leaves the ground on rear-court overheads and lands with a scissor-type leg switch.", "timestamps": [1391.8, 1392.1, 1665.8], "basis": "observed", "confidence": "medium", "visibility_limits": "Whether the shot is a smash, clear or drop is not visible; contact height relative to the body is only roughly visible."},
+    {"dimension": "footwork.recovery", "observation": "After the jump at 23:11.8 the pink player is back in a ready position near mid-court by about 23:13.", "timestamps": [1392.1, 1392.8], "basis": "observed", "confidence": "low", "visibility_limits": "Recovery speed is estimated from sampled frames, not measured."},
+    {"dimension": "far_player.technique", "observation": "The far-side player is too small in the frame to judge grip, racket face or foot placement.", "timestamps": [], "basis": "not_visible", "confidence": "high", "visibility_limits": "Needs a second camera or a closer, higher position behind the far baseline."},
+    {"dimension": "tactics.shot_selection", "observation": "Shot selection and placement cannot be determined because the shuttle is rarely visible in flight.", "timestamps": [], "basis": "not_visible", "confidence": "high", "visibility_limits": "A higher camera position (e.g. 2-3 m up behind the baseline) would show the shuttle path."}
+  ],
+  "stats": {
+    "source": "auto",
+    "items": [
+      "52 rally candidates from on-court motion (624 s total incl. a few seconds after each rally); not verified",
+      "Audio hit detection unusable in this hall (sound from neighbouring courts)",
+      "Visual review confirmed 7 candidates as rallies (r009, r018, r026, r039, r049 shown here)"
+    ]
+  },
+  "content_value": {
+    "best_for": ["match highlight", "short-form rally clip", "footwork teaching example once the player is identified"],
+    "beginner_value": "Shows real match tempo and how much a singles player covers the court in one rally.",
+    "advanced_value": "Jump overhead and recovery sequence (23:11-23:13) can be a slow-motion study once Colin confirms who is playing.",
+    "split_topics": ["Jump overhead + recovery", "Lunging to the front court", "Full condensed match (all rallies, dead time removed) — needs rally verification"]
+  },
+  "edit_plan": {
+    "long": {
+      "make": true,
+      "segments": [
+        {"start": 237.0, "end": 260.5, "speed": 1.0, "label": "Rally 1 (3:57)"},
+        {"start": 670.0, "end": 692.0, "speed": 1.0, "label": "Rally 2 (11:10)"},
+        {"start": 875.5, "end": 888.0, "speed": 1.0, "label": "Rally 3 (14:35)"},
+        {"start": 1385.5, "end": 1399.0, "speed": 1.0, "label": "Rally 4 (23:05)"},
+        {"start": 1390.6, "end": 1392.6, "speed": 0.5, "label": "Rally 4 jump overhead, slow-motion repeat"},
+        {"start": 1661.5, "end": 1669.5, "speed": 1.0, "label": "Rally 5 (27:41)"}
+      ]
+    },
+    "short": {
+      "make": true,
+      "aspect": "9:16",
+      "mode": "fit_blur",
+      "zoom": 1.35,
+      "crop_x_center": 0.42,
+      "segments": [
+        {"start": 1390.6, "end": 1392.6, "speed": 0.5, "label": "Cold open: jump overhead in slow motion"},
+        {"start": 1385.5, "end": 1399.0, "speed": 1.0, "label": "The full rally"},
+        {"start": 670.0, "end": 692.0, "speed": 1.0, "label": "20-second rally"},
+        {"start": 1661.5, "end": 1669.5, "speed": 1.0, "label": "Another jump overhead"}
+      ]
+    },
+    "rationale": "Five rallies that were checked frame by frame, each kept whole with ~1 s lead-in, cut right after play stops (no pickup or walking). Slow motion is only a 0.5x repeat of a real moment and is muted. The Short opens on the strongest visual (the jump at 23:11.8) within the first second, then shows the full rally so the slow motion has its real context. For the Short the whole 16:9 frame is kept (zoom 1.35 over a blurred fill) because the players move across the full width and a hard 9:16 crop would cut them out."
+  },
+  "subtitles": [
+    {"start": 237.2, "end": 240.0, "zh": "回合 1：底线相持", "en": "Rally 1: baseline exchange", "source": "caption"},
+    {"start": 252.8, "end": 255.6, "zh": "大步上网接前场球", "en": "Deep lunge to the front court", "source": "caption"},
+    {"start": 670.2, "end": 673.0, "zh": "回合 2：20 秒多拍", "en": "Rally 2: a 20-second rally", "source": "caption"},
+    {"start": 681.4, "end": 684.0, "zh": "低重心救球", "en": "Low lunge to keep the rally alive", "source": "caption"},
+    {"start": 875.7, "end": 878.5, "zh": "回合 3：前后场调动", "en": "Rally 3: front and back", "source": "caption"},
+    {"start": 1385.7, "end": 1388.5, "zh": "回合 4", "en": "Rally 4", "source": "caption"},
+    {"start": 1390.9, "end": 1393.4, "zh": "后场起跳击球", "en": "Jump overhead from the rear court", "source": "caption"},
+    {"start": 1661.7, "end": 1664.3, "zh": "回合 5", "en": "Rally 5", "source": "caption"},
+    {"start": 1664.6, "end": 1667.0, "zh": "再次起跳", "en": "Another jump overhead", "source": "caption"}
+  ],
+  "thumbnail": {
+    "time": 1391.8,
+    "zoom": 1.6,
+    "center_x": 0.42,
+    "center_y": 0.52,
+    "text": {"zh": "空中一击", "en": "Rally Highlights · Singles"},
+    "reason": "The player is fully airborne with the racket up; the frame explains the video without any added effect."
+  },
+  "copy": {
+    "youtube": {
+      "title_zh": "羽毛球单打 · 5 个完整回合",
+      "title_en": "Badminton Singles — 5 Full Rallies",
+      "description": "一场单打比赛中挑出的 5 个完整回合，保留回合前后的来球，不加速、不删减动作；第 4 回合的起跳击球附 0.5 倍慢放。\n\nFive full rallies from a singles match, kept whole with no speed-ups; the jump overhead in rally 4 is repeated at 0.5x.\n\n训练与课程 / Coaching: Colin Badminton",
+      "tags": ["badminton", "羽毛球", "badminton singles", "羽毛球单打", "badminton rally", "jump smash", "Colin Badminton", "badminton match"],
+      "chapters": [[237.0, "回合 1 Rally 1"], [670.0, "回合 2 Rally 2"], [875.5, "回合 3 Rally 3"], [1385.5, "回合 4 Rally 4"]],
+      "language": "zh"
+    },
+    "shorts": {
+      "title": "起跳那一下 + 20 秒多拍 | Badminton singles rally",
+      "description": "单打比赛完整回合，慢放只是同一动作的回放。Full rallies from a singles match; the slow motion is a replay of the same moment.",
+      "tags": ["badminton", "羽毛球", "shorts", "badminton rally"]
+    },
+    "xiaohongshu": {
+      "title": "单打比赛实录｜一个起跳＋几个长回合",
+      "body": "从一整场单打录像里挑了几个完整回合🏸\n\n▫️ 开头是后场起跳击球的 0.5 倍回放\n▫️ 第二段是一个 20 秒左右的多拍回合，注意上网时的大步跨出\n▫️ 机位放在底线后面地上，所以远端球员比较小\n\n想看完整分析可以去 YouTube 或 colinbadminton.com～",
+      "tags": ["羽毛球", "羽毛球单打", "羽毛球比赛", "羽毛球步法", "运动日常"]
+    },
+    "website": {
+      "section": "highlights",
+      "category": "matches",
+      "title": "Singles Match",
+      "description": "Five Full Rallies",
+      "seo_title": "Singles Match Rally Highlights | Colin Badminton",
+      "seo_description": "Five full rallies from a singles match, filmed behind the baseline, with a slow-motion replay of a jump overhead."
+    }
+  },
+  "kb_updates": [
+    {
+      "module": "content_style",
+      "dimension": "filming_setup",
+      "claim": "Colin records whole matches as one continuous file with a DJI camera on the floor behind one baseline (wide angle, fixed); the camera stays put when players change ends.",
+      "status": "observed",
+      "confidence": "high",
+      "evidence": [
+        {"start": 0.0, "end": 1749.5, "observation": "One 29:10 file, camera position unchanged throughout; near-side player changes after ~16:23-17:00."},
+        {"start": 109.2, "end": 109.2, "observation": "A finger touches the lens edge at 1:49 (camera adjusted by hand at floor level)."}
+      ],
+      "counter_evidence": "The 2024 OCAA edit used a different, higher side-court position."
+    }
+  ],
+  "pending_kb_updates": [
+    {"module": "technical_profile", "dimension": "footwork.lunge", "claim": "Makes long forward lunges to the front court within long rallies.", "status": "observed", "confidence": "medium", "waiting_for": "Colin confirms he is the white/red-shirt player",
+     "evidence": [{"start": 253.7, "end": 253.7, "observation": "Deep forward lunge toward the front court (white/red player, near side)."}, {"start": 682.2, "end": 682.2, "observation": "Low lunge at mid-court left (white/red player)."}]},
+    {"module": "technical_profile", "dimension": "rear_court.jump_overhead", "claim": "Leaves the ground on rear-court overheads and lands with a scissor leg switch.", "status": "observed", "confidence": "medium", "waiting_for": "Colin confirms he is the pink-shirt player",
+     "evidence": [{"start": 1391.8, "end": 1392.1, "observation": "Airborne overhead at rear left, scissor landing (pink player, near side)."}, {"start": 1665.8, "end": 1665.8, "observation": "Second jump overhead (pink player)."}]},
+    {"module": "technical_profile", "dimension": "footwork.recovery", "claim": "Recovers to a ready position near mid-court about one second after a jump overhead.", "status": "hypothesis", "confidence": "low", "waiting_for": "Colin confirms he is the pink-shirt player",
+     "evidence": [{"start": 1392.1, "end": 1392.8, "observation": "From landing to ready stance in sampled frames."}]}
+  ],
+  "needs_colin": [
+    "Which player are you: the white/red shirt (near side for the first ~16 minutes) or the pink shirt (near side after the change of ends)?",
+    "Opponent's name, and is he OK with this being posted? His face is visible at 4:21 and 14:48.",
+    "Event name, date and round (the camera clock says 2026-04-04 07:27; an umpire is in the chair).",
+    "Final score, if you want it in the description (I won't guess it).",
+    "Some people on the neighbouring courts look young. They are small and in the background; OK to publish as is, or should I blur the background?"
+  ]
+}

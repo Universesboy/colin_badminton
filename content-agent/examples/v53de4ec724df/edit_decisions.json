@@ -1,0 +1,97 @@
+{
+  "source": "(private, not in repo)",
+  "outputs": {
+    "long": {
+      "file": "renders/long_clean.mp4",
+      "duration": 83.5,
+      "timeline": [
+        {
+          "src_start": 237.0,
+          "src_end": 260.5,
+          "speed": 1.0,
+          "out_start": 0.0,
+          "out_end": 23.5,
+          "label": "Rally 1 (3:57)"
+        },
+        {
+          "src_start": 670.0,
+          "src_end": 692.0,
+          "speed": 1.0,
+          "out_start": 23.5,
+          "out_end": 45.5,
+          "label": "Rally 2 (11:10)"
+        },
+        {
+          "src_start": 875.5,
+          "src_end": 888.0,
+          "speed": 1.0,
+          "out_start": 45.5,
+          "out_end": 58.0,
+          "label": "Rally 3 (14:35)"
+        },
+        {
+          "src_start": 1385.5,
+          "src_end": 1399.0,
+          "speed": 1.0,
+          "out_start": 58.0,
+          "out_end": 71.5,
+          "label": "Rally 4 (23:05)"
+        },
+        {
+          "src_start": 1390.6,
+          "src_end": 1392.6,
+          "speed": 0.5,
+          "out_start": 71.5,
+          "out_end": 75.5,
+          "label": "Rally 4 jump overhead, slow-motion repeat"
+        },
+        {
+          "src_start": 1661.5,
+          "src_end": 1669.5,
+          "speed": 1.0,
+          "out_start": 75.5,
+          "out_end": 83.5,
+          "label": "Rally 5 (27:41)"
+        }
+      ]
+    },
+    "short": {
+      "file": "renders/short_clean.mp4",
+      "duration": 47.5,
+      "timeline": [
+        {
+          "src_start": 1390.6,
+          "src_end": 1392.6,
+          "speed": 0.5,
+          "out_start": 0.0,
+          "out_end": 4.0,
+          "label": "Cold open: jump overhead in slow motion"
+        },
+        {
+          "src_start": 1385.5,
+          "src_end": 1399.0,
+          "speed": 1.0,
+          "out_start": 4.0,
+          "out_end": 17.5,
+          "label": "The full rally"
+        },
+        {
+          "src_start": 670.0,
+          "src_end": 692.0,
+          "speed": 1.0,
+          "out_start": 17.5,
+          "out_end": 39.5,
+          "label": "20-second rally"
+        },
+        {
+          "src_start": 1661.5,
+          "src_end": 1669.5,
+          "speed": 1.0,
+          "out_start": 39.5,
+          "out_end": 47.5,
+          "label": "Another jump overhead"
+        }
+      ]
+    }
+  }
+}

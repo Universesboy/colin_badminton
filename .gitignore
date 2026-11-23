@@ -36,3 +36,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 EOL
+# Content agent: private media, renders and models never go to git
+/content-agent/data/
+/content-agent/models/
+__pycache__/
+.env
+*.secret.json
+client_secret*.json
