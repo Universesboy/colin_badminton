@@ -18,11 +18,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && node scripts/route-pages.js",
+    "build": "node scripts/validate-content.js && react-scripts build && node scripts/route-pages.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "check:content": "node scripts/validate-content.js"
   },
   "eslintConfig": {
     "extends": [

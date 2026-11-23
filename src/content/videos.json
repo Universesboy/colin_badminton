@@ -1,0 +1,639 @@
+{
+  "$schema": "./videos.schema.md",
+  "version": 1,
+  "videos": [
+    {
+      "slug": "footwork-drills",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "jfyaLvh-0Nc",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Footwork Drills",
+        "zh": "步法训练"
+      },
+      "summary": {
+        "en": "Essential movement patterns for full-court coverage: split step, recovery to base and six-corner movement.",
+        "zh": "覆盖全场的基础移动：启动、回中和六点步法。"
+      },
+      "categories": [
+        "footwork-movement",
+        "training-drills"
+      ],
+      "tags": [
+        "split step",
+        "six-corner",
+        "recovery"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/footworks.webp",
+      "orientation": "landscape",
+      "placements": [
+        "training"
+      ],
+      "collections": [
+        "footwork-guide"
+      ],
+      "featured": true,
+      "status": "published"
+    },
+    {
+      "slug": "smash-technique",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "XpX97WJzGpw",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Smash Technique",
+        "zh": "杀球技术"
+      },
+      "summary": {
+        "en": "Power and precision in overhead attacks, filmed in live rallies.",
+        "zh": "实战回合中的后场进攻：力量与落点。"
+      },
+      "categories": [
+        "technical-training"
+      ],
+      "tags": [
+        "smash",
+        "rear court",
+        "attack"
+      ],
+      "level": "intermediate",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-mattew1.webp",
+      "orientation": "landscape",
+      "placements": [
+        "training"
+      ],
+      "collections": [
+        "backcourt-attack-defence"
+      ],
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "slug": "defensive-skills",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "lWfaT717nis",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Defensive Skills",
+        "zh": "防守技术"
+      },
+      "summary": {
+        "en": "Blocking and returning powerful shots under pressure.",
+        "zh": "在压力下挡网与抽挡回球。"
+      },
+      "categories": [
+        "technical-training"
+      ],
+      "tags": [
+        "defence",
+        "block",
+        "drive"
+      ],
+      "level": "intermediate",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-mj2.webp",
+      "orientation": "landscape",
+      "placements": [
+        "training"
+      ],
+      "collections": [
+        "backcourt-attack-defence"
+      ],
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "slug": "net-play",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "dGH-9FRz5ko",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Net Play",
+        "zh": "网前技术"
+      },
+      "summary": {
+        "en": "Control and finesse at the front court: net shots, lifts and taking the shuttle early.",
+        "zh": "网前控制：放网、挑球与抢点。"
+      },
+      "categories": [
+        "technical-training"
+      ],
+      "tags": [
+        "net shot",
+        "front court",
+        "lift"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-mj3.webp",
+      "orientation": "landscape",
+      "placements": [
+        "training"
+      ],
+      "collections": [],
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "slug": "fitness-conditioning",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "awVeUT3e5v0",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Fitness Conditioning",
+        "zh": "专项体能"
+      },
+      "summary": {
+        "en": "Building stamina and strength for long rallies.",
+        "zh": "为多拍回合打下的耐力与力量基础。"
+      },
+      "categories": [
+        "footwork-movement",
+        "training-drills"
+      ],
+      "tags": [
+        "conditioning",
+        "endurance"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-mj5.webp",
+      "orientation": "landscape",
+      "placements": [
+        "training"
+      ],
+      "collections": [
+        "footwork-guide"
+      ],
+      "featured": false,
+      "status": "published"
+    },
+    {
+      "slug": "ccaa-national-championships-final",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "1CkIzrksj0A",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "National Championships",
+        "zh": "全国大学生锦标赛决赛"
+      },
+      "summary": {
+        "en": "Final Match Highlights",
+        "zh": "决赛精彩回合"
+      },
+      "categories": [
+        "professional-competition",
+        "match-analysis"
+      ],
+      "tags": [
+        "CCAA",
+        "final"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin_national_championships.webp",
+      "orientation": "landscape",
+      "placements": [
+        "highlights"
+      ],
+      "collections": [
+        "match-analysis-collection"
+      ],
+      "featured": true,
+      "status": "published",
+      "legacy": {
+        "title": "National Championships",
+        "description": "Final Match Highlights",
+        "category": "tournaments"
+      }
+    },
+    {
+      "slug": "colin-vs-zeng",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "YVRk2iWuBOw",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Colin vs Zeng",
+        "zh": "Colin 对阵 Zeng"
+      },
+      "summary": {
+        "en": "Match Highlights",
+        "zh": "比赛集锦"
+      },
+      "categories": [
+        "professional-competition"
+      ],
+      "tags": [
+        "singles"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-zeng.webp",
+      "orientation": "portrait",
+      "placements": [
+        "highlights"
+      ],
+      "collections": [],
+      "featured": true,
+      "status": "published",
+      "legacy": {
+        "title": "Colin vs Zeng",
+        "description": "Match Highlights",
+        "category": "matches"
+      }
+    },
+    {
+      "slug": "ontario-provincials-vs-timothy",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "CMH451dTCNk",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Ontario Provincial Championships",
+        "zh": "安大略省锦标赛"
+      },
+      "summary": {
+        "en": "Colin vs Timothy",
+        "zh": "Colin 对阵 Timothy"
+      },
+      "categories": [
+        "professional-competition"
+      ],
+      "tags": [
+        "Ontario",
+        "singles"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-timthy.webp",
+      "orientation": "landscape",
+      "placements": [
+        "highlights"
+      ],
+      "collections": [],
+      "featured": false,
+      "status": "published",
+      "legacy": {
+        "title": "Ontario Provincial Championships",
+        "description": "Colin vs Timothy",
+        "category": "tournaments"
+      }
+    },
+    {
+      "slug": "colin-vs-nando",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "Hu3xOCKEbjw",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Colin vs Nando",
+        "zh": "Colin 对阵 Nando"
+      },
+      "summary": {
+        "en": "Match Highlights",
+        "zh": "比赛集锦"
+      },
+      "categories": [
+        "professional-competition"
+      ],
+      "tags": [
+        "singles"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-nando.webp",
+      "orientation": "landscape",
+      "placements": [
+        "highlights"
+      ],
+      "collections": [],
+      "featured": false,
+      "status": "published",
+      "legacy": {
+        "title": "Colin vs Nando",
+        "description": "Match Highlights",
+        "category": "matches"
+      }
+    },
+    {
+      "slug": "colin-vs-nando-long-rallies",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "UaDET-_M6js",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Colin vs Nando",
+        "zh": "Colin 对阵 Nando：多拍回合"
+      },
+      "summary": {
+        "en": "Match Highlights Long Rallies",
+        "zh": "多拍回合集锦"
+      },
+      "categories": [
+        "professional-competition"
+      ],
+      "tags": [
+        "singles",
+        "long rallies"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-nando_long.webp",
+      "orientation": "landscape",
+      "placements": [
+        "highlights"
+      ],
+      "collections": [],
+      "featured": false,
+      "status": "published",
+      "legacy": {
+        "title": "Colin vs Nando",
+        "description": "Match Highlights Long Rallies",
+        "category": "matches"
+      }
+    },
+    {
+      "slug": "training-session-dimas-1",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "laZyef7no78",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Professional Practice Session",
+        "zh": "高水平对练"
+      },
+      "summary": {
+        "en": "Match-intensity practice: how rallies are built in a professional session.",
+        "zh": "比赛强度的对练，看专业训练中回合如何组织。"
+      },
+      "categories": [
+        "training-drills",
+        "singles-strategy"
+      ],
+      "tags": [
+        "sparring",
+        "rally building"
+      ],
+      "level": "advanced",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-dimas1.webp",
+      "orientation": "landscape",
+      "placements": [
+        "training",
+        "highlights"
+      ],
+      "collections": [],
+      "featured": false,
+      "status": "published",
+      "legacy": {
+        "title": "Training Highlights",
+        "description": "Professional Practice Session",
+        "category": "training"
+      }
+    },
+    {
+      "slug": "training-session-dimas-2",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "vRJTBx98Baw",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "Practice Match",
+        "zh": "训练赛"
+      },
+      "summary": {
+        "en": "A full-speed practice match with rally-by-rally decision making.",
+        "zh": "全速训练赛，逐拍观察选择与变化。"
+      },
+      "categories": [
+        "training-drills",
+        "singles-strategy"
+      ],
+      "tags": [
+        "practice match",
+        "singles"
+      ],
+      "level": "advanced",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-dimas2.webp",
+      "orientation": "landscape",
+      "placements": [
+        "training",
+        "highlights"
+      ],
+      "collections": [],
+      "featured": false,
+      "status": "published",
+      "legacy": {
+        "title": "Training Highlights",
+        "description": "Match Highlights",
+        "category": "training"
+      }
+    },
+    {
+      "slug": "ocaa-highlights",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "Tt-EQAx54V0",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "OCAA Highlights",
+        "zh": "OCAA 锦标赛集锦"
+      },
+      "summary": {
+        "en": "Ontario College Athletic Association Championship",
+        "zh": "安大略省大学体育联盟锦标赛"
+      },
+      "categories": [
+        "professional-competition"
+      ],
+      "tags": [
+        "OCAA"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colinprovincial.webp",
+      "orientation": "portrait",
+      "placements": [
+        "highlights"
+      ],
+      "collections": [],
+      "featured": false,
+      "status": "published",
+      "legacy": {
+        "title": "OCAA Highlights",
+        "description": "Ontario College Athletic Association Championship",
+        "category": "tournaments"
+      }
+    },
+    {
+      "slug": "ocaa-finals-1",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "IyPrqtoeZDs",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "OCAA Finals",
+        "zh": "OCAA 决赛（一）"
+      },
+      "summary": {
+        "en": "Ontario College Athletic Association Championship",
+        "zh": "安大略省大学体育联盟锦标赛"
+      },
+      "categories": [
+        "professional-competition"
+      ],
+      "tags": [
+        "OCAA",
+        "final"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-tim1.webp",
+      "orientation": "portrait",
+      "placements": [
+        "highlights"
+      ],
+      "collections": [],
+      "featured": false,
+      "status": "published",
+      "legacy": {
+        "title": "OCAA Finals",
+        "description": "Ontario College Athletic Association Championship",
+        "category": "tournaments"
+      }
+    },
+    {
+      "slug": "ocaa-finals-2",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "9JoS7zQrpWo",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "OCAA Finals",
+        "zh": "OCAA 决赛（二）"
+      },
+      "summary": {
+        "en": "Ontario College Athletic Association Championship",
+        "zh": "安大略省大学体育联盟锦标赛"
+      },
+      "categories": [
+        "professional-competition"
+      ],
+      "tags": [
+        "OCAA",
+        "final"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-tim2.webp",
+      "orientation": "portrait",
+      "placements": [
+        "highlights"
+      ],
+      "collections": [],
+      "featured": false,
+      "status": "published",
+      "legacy": {
+        "title": "OCAA Finals",
+        "description": "Ontario College Athletic Association Championship",
+        "category": "tournaments"
+      }
+    },
+    {
+      "slug": "ocaa-finals-3",
+      "source": {
+        "platform": "youtube",
+        "youtubeId": "vc_P6Hc_s0s",
+        "xhsNoteId": null,
+        "originalUrl": null
+      },
+      "title": {
+        "en": "OCAA Finals",
+        "zh": "OCAA 决赛（三）"
+      },
+      "summary": {
+        "en": "Highlights",
+        "zh": "集锦"
+      },
+      "categories": [
+        "professional-competition"
+      ],
+      "tags": [
+        "OCAA",
+        "final"
+      ],
+      "level": "all",
+      "durationSec": null,
+      "publishedAt": null,
+      "poster": "/media/thumbs/colin-vs-tim3.webp",
+      "orientation": "portrait",
+      "placements": [
+        "highlights"
+      ],
+      "collections": [],
+      "featured": false,
+      "status": "published",
+      "legacy": {
+        "title": "OCAA Finals",
+        "description": "Highlights",
+        "category": "tournaments"
+      }
+    }
+  ]
+}
