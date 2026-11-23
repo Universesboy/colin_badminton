@@ -1,0 +1,37 @@
+# Refreshes YouTube view counts, publish dates and durations once a day.
+# Needs a YouTube Data API key stored as the repository secret YT_API_KEY.
+# A changed stats file is committed to main, then the Pages deploy is started
+# (pushes made with GITHUB_TOKEN don't trigger other workflows on their own).
+name: Update video stats
+
+on:
+  schedule:
+    - cron: '17 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Fetch stats
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+        run: node scripts/update-video-stats.mjs
+      - name: Commit if changed
+        run: |
+          git diff --quiet -- src/data/videoStats.json && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update video stats" -- src/data/videoStats.json
+          git push
+          gh workflow run static.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
