@@ -1,0 +1,104 @@
+{
+  "video": "v53de4ec724df",
+  "source_file": "DJI_20260404072736_0007_1080p.mp4",
+  "created": "2026-11-23",
+  "changes": [
+    {
+      "op": "new_claim",
+      "module": "content_style",
+      "dimension": "filming_setup",
+      "claim": "Colin records whole matches as one continuous file with a DJI camera on the floor behind one baseline (wide angle, fixed); the camera stays put when players change ends.",
+      "status": "observed",
+      "confidence": "high",
+      "evidence": [
+        {
+          "video": "v53de4ec724df",
+          "start": 0.0,
+          "end": 1749.5,
+          "observation": "One 29:10 file, camera position unchanged throughout; near-side player changes after ~16:23-17:00.",
+          "added": "2026-11-23"
+        },
+        {
+          "video": "v53de4ec724df",
+          "start": 109.2,
+          "end": 109.2,
+          "observation": "A finger touches the lens edge at 1:49 (camera adjusted by hand at floor level).",
+          "added": "2026-11-23"
+        }
+      ],
+      "counter_evidence_note": "The 2024 OCAA edit used a different, higher side-court position."
+    }
+  ],
+  "pending": [
+    {
+      "op": "pending",
+      "module": "technical_profile",
+      "dimension": "footwork.lunge",
+      "claim": "Makes long forward lunges to the front court within long rallies.",
+      "status": "observed",
+      "confidence": "medium",
+      "waiting_for": "Colin confirms he is the white/red-shirt player",
+      "evidence": [
+        {
+          "video": "v53de4ec724df",
+          "start": 253.7,
+          "end": 253.7,
+          "observation": "Deep forward lunge toward the front court (white/red player, near side).",
+          "added": "2026-11-23"
+        },
+        {
+          "video": "v53de4ec724df",
+          "start": 682.2,
+          "end": 682.2,
+          "observation": "Low lunge at mid-court left (white/red player).",
+          "added": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "op": "pending",
+      "module": "technical_profile",
+      "dimension": "rear_court.jump_overhead",
+      "claim": "Leaves the ground on rear-court overheads and lands with a scissor leg switch.",
+      "status": "observed",
+      "confidence": "medium",
+      "waiting_for": "Colin confirms he is the pink-shirt player",
+      "evidence": [
+        {
+          "video": "v53de4ec724df",
+          "start": 1391.8,
+          "end": 1392.1,
+          "observation": "Airborne overhead at rear left, scissor landing (pink player, near side).",
+          "added": "2026-11-23"
+        },
+        {
+          "video": "v53de4ec724df",
+          "start": 1665.8,
+          "end": 1665.8,
+          "observation": "Second jump overhead (pink player).",
+          "added": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "op": "pending",
+      "module": "technical_profile",
+      "dimension": "footwork.recovery",
+      "claim": "Recovers to a ready position near mid-court about one second after a jump overhead.",
+      "status": "hypothesis",
+      "confidence": "low",
+      "waiting_for": "Colin confirms he is the pink-shirt player",
+      "evidence": [
+        {
+          "video": "v53de4ec724df",
+          "start": 1392.1,
+          "end": 1392.8,
+          "observation": "From landing to ready stance in sampled frames.",
+          "added": "2026-11-23"
+        }
+      ]
+    }
+  ],
+  "applied": true,
+  "applied_at": "2026-11-23T11:46:53+00:00"
+}

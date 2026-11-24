@@ -1,0 +1,78 @@
+module: coaching_philosophy
+title: Colin Coaching Philosophy 教学理念
+updated: '2026-11-23'
+rules: 'Claims need video evidence with timestamps. Status: observed | hypothesis | repeated_pattern (>=3
+  videos, automatic) | confirmed (Colin only) | revised. Never delete a claim; keep history.'
+stated_principles:
+  source: colinbadminton.com Training page (Colin's own published text, src/data/site.js), read 2026-11-23
+  status: stated_by_colin (not yet observed in a teaching video)
+  items:
+  - title: Technical Foundation
+    text: Mastering proper technique is essential before building speed and power.
+  - title: Tactical Awareness
+    text: Understanding game strategy and developing court awareness and decision-making.
+  - title: Physical Conditioning
+    text: Building the strength, speed, and endurance needed for competitive play.
+  - title: Mental Toughness
+    text: Developing focus, resilience, and competitive mindset for match play.
+  - title: Bilingual Instruction
+    text: Professional coaching in both English and Chinese
+  - title: Detailed Analysis
+    text: Thorough analysis of student strengths and areas for improvement
+  - title: Continuous Support
+    text: Post-lesson feedback and development planning
+dimensions:
+  explaining_technique:
+    label:
+      zh: 如何解释技术动作
+      en: How a technique is explained
+    status: needs_verification
+    claims: []
+  breaking_down_details:
+    label:
+      zh: 如何拆解技术细节
+      en: Breaking down details
+    status: needs_verification
+    claims: []
+  drill_design:
+    label:
+      zh: 训练方法设计
+      en: Drill design
+    status: needs_verification
+    claims: []
+  diagnosing_problems:
+    label:
+      zh: 发现学生问题
+      en: Diagnosing student problems
+    status: needs_verification
+    claims: []
+  progression:
+    label:
+      zh: 技术进阶安排
+      en: Progression
+    status: needs_verification
+    claims: []
+  teaching_tactics:
+    label:
+      zh: 如何讲解战术
+      en: Teaching tactics
+    status: needs_verification
+    claims: []
+  adapting_to_level:
+    label:
+      zh: 针对不同水平的解释
+      en: Adapting to level
+    status: needs_verification
+    claims: []
+  terminology:
+    label:
+      zh: 常用专业术语
+      en: Terminology
+    status: needs_verification
+    claims: []
+  core_principles:
+    label:
+      zh: 核心原则（视频中观察到的）
+      en: Core principles (observed in video)
+    status: needs_verification
+    claims: []

@@ -1,0 +1,11 @@
+# Core pipeline (CPU only)
+numpy>=1.26
+pillow>=10
+pyyaml>=6
+pysubs2>=1.7
+sherpa-onnx>=1.10        # offline ASR: SenseVoice-Small + Silero VAD
+# Optional: Claude API analysis backend (CBA_ANALYST=api)
+anthropic>=1.0
+# Optional: YouTube publishing
+google-api-python-client>=2.100
+google-auth-oauthlib>=1.2

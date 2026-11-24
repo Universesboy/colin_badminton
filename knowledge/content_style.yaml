@@ -1,0 +1,184 @@
+module: content_style
+title: Colin Content Style 内容风格
+updated: '2026-11-23'
+rules: 'Claims need video evidence with timestamps. Status: observed | hypothesis | repeated_pattern (>=3
+  videos, automatic) | confirmed (Colin only) | revised. Never delete a claim; keep history.'
+dimensions:
+  language_style:
+    label:
+      zh: 语言风格
+      en: Language style
+    status: needs_verification
+    claims: []
+  explanation_pace:
+    label:
+      zh: 讲解节奏
+      en: Explanation pace
+    status: needs_verification
+    claims: []
+  sentence_length:
+    label:
+      zh: 句子长度
+      en: Sentence length
+    status: needs_verification
+    claims: []
+  openings:
+    label:
+      zh: 开场方式
+      en: Openings
+    status: needs_verification
+    claims: []
+  endings:
+    label:
+      zh: 结尾方式
+      en: Endings
+    status: needs_verification
+    claims: []
+  technical_expressions:
+    label:
+      zh: 常用技术表达
+      en: Technical expressions
+    status: needs_verification
+    claims: []
+  edit_rhythm:
+    label:
+      zh: 剪辑节奏
+      en: Edit rhythm
+    status: has_evidence
+    claims:
+    - id: edit_rhythm-01
+      claim: The Xiaohongshu highlight keeps rallies from one fixed court-side camera, then switches to
+        other camera angles for the last few seconds.
+      status: observed
+      confidence: low
+      evidence:
+      - video: xhs-ocaa-highlight-2024-05-23 (小红书制作资料/OCAA 男单精彩片段.mp4)
+        added: '2026-11-23'
+        start: 0
+        end: 39.2
+        observation: Frames at 0-30 s share one fixed camera position; frames at 33 s, 36 s and 39 s come
+          from different, closer angles; the 39 s frame shows a racket lying on the floor next to the
+          player in yellow.
+      counter_evidence: []
+      history: []
+      created: '2026-11-23'
+      updated: '2026-11-23'
+      notes: One video only. Why the ending changes angle (celebration? different camera?) needs Colin's
+        confirmation.
+  subtitle_style:
+    label:
+      zh: 字幕样式
+      en: Subtitle style
+    status: has_evidence
+    claims:
+    - id: subtitle_style-01
+      claim: The one available Xiaohongshu edit has no burned-in subtitles or text overlays.
+      status: observed
+      confidence: medium
+      evidence:
+      - video: xhs-ocaa-highlight-2024-05-23 (小红书制作资料/OCAA 男单精彩片段.mp4)
+        added: '2026-11-23'
+        start: 0
+        end: 39.2
+        observation: 14 sampled frames (every 3 s) show no on-screen text.
+      counter_evidence: []
+      history: []
+      created: '2026-11-23'
+      updated: '2026-11-23'
+      notes: One video only.
+  cover_style:
+    label:
+      zh: 封面风格
+      en: Cover style
+    status: needs_verification
+    claims: []
+  title_style:
+    label:
+      zh: 标题风格
+      en: Title style
+    status: has_evidence
+    claims:
+    - id: title_style-01
+      claim: Existing YouTube uploads use short, plain English file-style titles such as 'colin vs mj2',
+        'footworks', 'colin national championships'; the website re-titles them ('Match Highlights', 'Footwork
+        Drills').
+      status: observed
+      confidence: high
+      evidence:
+      - video: youtube-channel-listing-2026-11-23
+        start: 0
+        end: 0
+        added: '2026-11-23'
+        observation: '16 public videos listed: lowercase ''colin vs <name>'' pattern for 13 of them.'
+      counter_evidence: []
+      history: []
+      created: '2026-11-23'
+      updated: '2026-11-23'
+      notes: These look like uploads named after files, not chosen titles; ask Colin whether he wants
+        to keep this style.
+  music:
+    label:
+      zh: 背景音乐
+      en: Music
+    status: needs_verification
+    claims: []
+  effects_transitions:
+    label:
+      zh: 特效与转场
+      en: Effects and transitions
+    status: needs_verification
+    claims: []
+  formats:
+    label:
+      zh: 画幅与时长
+      en: Format and length
+    status: has_evidence
+    claims:
+    - id: formats-01
+      claim: Published clips so far are very short (5-68 s) single-rally or few-rally highlights; several
+        are vertical (Shorts).
+      status: observed
+      confidence: high
+      evidence:
+      - video: youtube-channel-listing-2026-11-23
+        start: 0
+        end: 0
+        added: '2026-11-23'
+        observation: Durations 0:05-1:08; site marks 6 of 16 as portrait/Shorts.
+      - video: xhs-ocaa-highlight-2024-05-23 (小红书制作资料/OCAA 男单精彩片段.mp4)
+        added: '2026-11-23'
+        start: 0
+        end: 39.2
+        observation: 39 s vertical 478x850 highlight made for Xiaohongshu.
+      counter_evidence: []
+      history: []
+      created: '2026-11-23'
+      updated: '2026-11-23'
+  filming_setup:
+    label:
+      zh: 拍摄机位
+      en: Filming setup
+    status: has_evidence
+    claims:
+    - id: filming_setup-01
+      claim: Colin's match recording on file (2026-04-04) is one continuous file from a DJI camera on
+        the floor behind one baseline (wide angle, fixed); the camera stays put when players change ends.
+      status: observed
+      confidence: high
+      evidence:
+      - video: v53de4ec724df
+        start: 0.0
+        end: 1749.5
+        observation: One 29:10 file, camera position unchanged throughout; near-side player changes after
+          ~16:23-17:00.
+        added: '2026-11-23'
+      - video: v53de4ec724df
+        start: 109.2
+        end: 109.2
+        observation: A finger touches the lens edge at 1:49 (camera adjusted by hand at floor level).
+        added: '2026-11-23'
+      counter_evidence: []
+      history: []
+      created: '2026-11-23'
+      updated: '2026-11-23'
+      notes: The 2024 OCAA edit used a different, higher side-court position.

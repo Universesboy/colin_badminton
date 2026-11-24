@@ -1,0 +1,24 @@
+1
+00:00:17,700 --> 00:00:20,500
+Rally 2: a 20-second rally
+
+2
+00:00:28,900 --> 00:00:31,500
+Low lunge to keep the rally alive
+
+3
+00:00:04,200 --> 00:00:07,000
+Rally 4
+
+4
+00:00:09,400 --> 00:00:11,900
+Jump overhead from the rear court
+
+5
+00:00:39,700 --> 00:00:42,300
+Rally 5
+
+6
+00:00:42,600 --> 00:00:45,000
+Another jump overhead
+

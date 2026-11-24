@@ -1,0 +1,192 @@
+module: technical_profile
+title: Colin Technical Profile 技术档案
+updated: '2026-11-23'
+rules: 'Claims need video evidence with timestamps. Status: observed | hypothesis | repeated_pattern (>=3
+  videos, automatic) | confirmed (Colin only) | revised. Never delete a claim; keep history.'
+sources_reviewed:
+- source: colinbadminton.com gallery photo 'Jump Smash at National Championships' (public/media/jump-smash.webp)
+  type: still photo
+  used_for: smash
+- source: YouTube @zhoukeyu9105 (16 public clips, 5-68 s, titles only reviewed on 2026-11-23)
+  type: titles/durations only
+  used_for: nothing technical yet
+dimensions:
+  serve:
+    label:
+      zh: 发球
+      en: Serve
+    status: needs_verification
+    claims: []
+  return_of_serve:
+    label:
+      zh: 接发球
+      en: Return of serve
+    status: needs_verification
+    claims: []
+  forehand:
+    label:
+      zh: 正手技术
+      en: Forehand
+    status: needs_verification
+    claims: []
+  backhand:
+    label:
+      zh: 反手技术
+      en: Backhand
+    status: needs_verification
+    claims: []
+  net_play:
+    label:
+      zh: 网前技术
+      en: Net play
+    status: needs_verification
+    claims: []
+  rear_court:
+    label:
+      zh: 后场技术
+      en: Rear court
+    status: needs_verification
+    claims: []
+  smash:
+    label:
+      zh: 杀球
+      en: Smash
+    status: has_evidence
+    claims:
+    - id: smash-01
+      claim: Colin uses the jump smash in competition (one photo).
+      status: observed
+      confidence: low
+      evidence:
+      - video: site-photo:jump-smash.webp
+        start: 0
+        end: 0
+        observation: Still photo captioned 'Jump Smash at National Championships' on colinbadminton.com
+          shows a jump smash.
+        added: '2026-11-23'
+      counter_evidence: []
+      history: []
+      created: '2026-11-23'
+      updated: '2026-11-23'
+      notes: A single still photo; says nothing about frequency, power or effectiveness.
+  drop:
+    label:
+      zh: 吊球
+      en: Drop shot
+    status: needs_verification
+    claims: []
+  clear:
+    label:
+      zh: 高远球
+      en: Clear
+    status: needs_verification
+    claims: []
+  defence:
+    label:
+      zh: 防守
+      en: Defence
+    status: needs_verification
+    claims: []
+  smash_defence:
+    label:
+      zh: 接杀
+      en: Smash defence
+    status: needs_verification
+    claims: []
+  footwork:
+    label:
+      zh: 步法
+      en: Footwork
+    status: needs_verification
+    claims: []
+  turning:
+    label:
+      zh: 转身能力
+      en: Turning
+    status: needs_verification
+    claims: []
+  court_movement:
+    label:
+      zh: 场上移动
+      en: Court movement
+    status: needs_verification
+    claims: []
+  continuous_attack:
+    label:
+      zh: 连续进攻能力
+      en: Continuous attack
+    status: needs_verification
+    claims: []
+  rally_control:
+    label:
+      zh: 多拍控制能力
+      en: Long-rally control
+    status: needs_verification
+    claims: []
+tactics:
+  singles_tactics:
+    label:
+      zh: 单打战术
+      en: Singles tactics
+    status: needs_verification
+    claims: []
+  doubles_tactics:
+    label:
+      zh: 双打战术
+      en: Doubles tactics
+    status: needs_verification
+    claims: []
+  transition:
+    label:
+      zh: 攻防转换
+      en: Attack-defence transition
+    status: needs_verification
+    claims: []
+  moving_opponent:
+    label:
+      zh: 控制对手移动
+      en: Moving the opponent
+    status: needs_verification
+    claims: []
+  four_corners:
+    label:
+      zh: 四点调动
+      en: Four-corner play
+    status: needs_verification
+    claims: []
+  attack_building:
+    label:
+      zh: 进攻组织
+      en: Building the attack
+    status: needs_verification
+    claims: []
+  counter_attack:
+    label:
+      zh: 防守反击
+      en: Counter-attack
+    status: needs_verification
+    claims: []
+  tempo_change:
+    label:
+      zh: 节奏变化
+      en: Tempo change
+    status: needs_verification
+    claims: []
+  placement:
+    label:
+      zh: 落点选择
+      en: Shot placement
+    status: needs_verification
+    claims: []
+  game_reading:
+    label:
+      zh: 比赛阅读能力
+      en: Reading the game
+    status: needs_verification
+    claims: []
+  in_match_adjustment:
+    label:
+      zh: 临场调整能力
+      en: In-match adjustment
+    status: needs_verification
+    claims: []

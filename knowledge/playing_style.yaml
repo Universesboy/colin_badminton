@@ -1,0 +1,74 @@
+module: playing_style
+title: Colin Playing Style 打法风格
+updated: '2026-11-23'
+rules: 'Claims need video evidence with timestamps. Status: observed | hypothesis | repeated_pattern (>=3
+  videos, automatic) | confirmed (Colin only) | revised. Never delete a claim; keep history.'
+guidance: 'Do not label ''attacking'' or ''defensive''. For each trait record: which actions show it,
+  in which match situation, whether it repeats, and how it changes by opponent.'
+dimensions:
+  attack_control_balance:
+    label:
+      zh: 进攻与控制的平衡
+      en: Attack vs control balance
+    status: needs_verification
+    claims: []
+  counter_attack_traits:
+    label:
+      zh: 防守反击特点
+      en: Counter-attack traits
+    status: needs_verification
+    claims: []
+  attack_organisation:
+    label:
+      zh: 进攻组织方式
+      en: Attack organisation
+    status: needs_verification
+    claims: []
+  favourite_patterns:
+    label:
+      zh: 擅长的球路组合
+      en: Favourite shot patterns
+    status: needs_verification
+    claims: []
+  tactical_routines:
+    label:
+      zh: 常用战术套路
+      en: Tactical routines
+    status: needs_verification
+    claims: []
+  tempo_preference:
+    label:
+      zh: 场上节奏偏好
+      en: Tempo preference
+    status: needs_verification
+    claims: []
+  adjustment_by_opponent:
+    label:
+      zh: 面对不同对手的调整
+      en: Adjustment by opponent
+    status: needs_verification
+    claims: []
+  scoring_patterns:
+    label:
+      zh: 得分方式
+      en: How points are won
+    status: needs_verification
+    claims: []
+  error_patterns:
+    label:
+      zh: 容易出现的失误类型
+      en: Typical errors
+    status: needs_verification
+    claims: []
+  key_point_handling:
+    label:
+      zh: 关键分处理
+      en: Key-point handling
+    status: needs_verification
+    claims: []
+  strengths_and_limits:
+    label:
+      zh: 技术优势与局限
+      en: Strengths and limits
+    status: needs_verification
+    claims: []
