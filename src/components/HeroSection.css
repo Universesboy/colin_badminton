@@ -288,7 +288,7 @@
 
 @media (max-width: 959px) {
   .hero__vignette {
-    background: linear-gradient(0deg, var(--stage-bg) 0%, rgba(11, 20, 16, 0.7) 30%, rgba(11, 20, 16, 0) 55%);
+    background: linear-gradient(0deg, var(--stage-bg) 0%, rgba(11, 20, 16, 0.55) 24%, rgba(11, 20, 16, 0) 46%);
   }
   .hero__inner {
     padding-top: var(--space-4);

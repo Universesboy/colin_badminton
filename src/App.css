@@ -180,6 +180,7 @@ main {
 .section--stage .mark,
 .section--brand .mark {
   color: var(--chalk-lime);
+  white-space: normal;
 }
 
 .section--stage .mark::after,

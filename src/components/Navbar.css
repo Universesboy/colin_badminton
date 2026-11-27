@@ -144,6 +144,10 @@
   display: none;
 }
 
+.nav__menu-cta {
+  display: none !important;
+}
+
 @media (max-width: 959px) {
   .nav__toggle {
     display: grid;
@@ -220,8 +224,4 @@
     display: flex !important;
     width: 100%;
   }
-}
-
-.nav__menu-cta {
-  display: none !important;
 }

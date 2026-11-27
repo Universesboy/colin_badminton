@@ -157,3 +157,7 @@ a.contact-method:hover .contact-method__arrow {
 .contact-form__note {
   font-size: var(--fs-small);
 }
+
+.contact-qr h2 {
+  text-transform: none;
+}
