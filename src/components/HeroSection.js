@@ -21,7 +21,6 @@ function HeroSection() {
       <div className="hero__inner container">
         <div className="hero__figure" aria-hidden="true">
           <span className="hero__halo" />
-          <span className="hero__year">2023</span>
           <img
             className="hero__athlete"
             src="/media/athlete-cutout.webp"

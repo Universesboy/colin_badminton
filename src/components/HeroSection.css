@@ -77,23 +77,6 @@
   animation: hero-fade 1.6s var(--ease-out) both 0.4s;
 }
 
-.hero__year {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  translate: -50% -50%;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(6rem, 24vw, 15rem);
-  line-height: 1;
-  letter-spacing: -0.06em;
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(200, 241, 105, 0.32);
-  transform: translate3d(calc(var(--px) * -18px), calc(var(--py) * -10px + var(--sy) * 60px), 0);
-  animation: hero-fade 1.4s var(--ease-out) both 0.5s;
-  white-space: nowrap;
-}
-
 .hero__athlete {
   position: relative;
   width: 100%;
