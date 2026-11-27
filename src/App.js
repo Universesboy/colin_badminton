@@ -21,6 +21,16 @@ function ScrollToTop() {
   return null;
 }
 
+// Re-keys the page wrapper on navigation so the new page rises in
+function RouteView({ children }) {
+  const { pathname } = useLocation();
+  return (
+    <div key={pathname} className="route-enter">
+      {children}
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
@@ -31,6 +41,7 @@ function App() {
       <Navbar />
       <main id="main" tabIndex="-1">
         <Suspense fallback={<div className="route-fallback" aria-hidden="true" />}>
+          <RouteView>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/highlights" element={<Highlights />} />
@@ -39,6 +50,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Home />} />
           </Routes>
+          </RouteView>
         </Suspense>
       </main>
       <Footer />

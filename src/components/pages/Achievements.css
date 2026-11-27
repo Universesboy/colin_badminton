@@ -1,39 +1,43 @@
-.award {
-  display: grid;
-  gap: var(--space-3);
-  align-content: start;
-  padding: var(--space-6) var(--space-5);
-  border-radius: var(--radius-md);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+.achievements-honours .chip {
+  color: var(--stage-text);
+  border-color: var(--stage-line-strong);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-@media (hover: hover) {
-  .award:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+@media (max-width: 639px) {
+  .achievements-honours .chip {
+    min-height: 34px;
+    padding: 0 var(--space-3);
+    font-size: 0.8125rem;
   }
 }
 
-.award__icon {
+.achievements-list {
+  list-style: none;
   display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
-  color: var(--accent);
-  margin-bottom: var(--space-3);
+  gap: var(--space-3);
 }
 
-.award h3 {
-  font-size: var(--fs-h3);
-}
-
-.award p {
+.achievements-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
   color: var(--text-muted);
-  font-size: var(--fs-small);
+  font-size: 0.9375rem;
+}
+
+.achievements-list svg {
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.achievements-list strong {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.achievements-steps {
+  list-style: none;
 }
 
 .achievements-coaching {
@@ -53,7 +57,7 @@
 }
 
 .achievements-coaching .timeline__item::before {
-  box-shadow: 0 0 0 4px var(--stage-bg);
+  box-shadow: 0 0 0 4px var(--chalk-forest-deep);
 }
 
 /* Gallery: editorial mosaic on desktop, two columns on phones */
@@ -125,10 +129,9 @@
 
 .achievement-gallery__item figcaption strong {
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1.1;
+  font-size: 1.125rem;
+  font-weight: 650;
+  line-height: 1.2;
 }
 
 .achievement-gallery__item figcaption span {

@@ -346,3 +346,133 @@ export const videoCategories = [
   { id: 'matches', label: 'Matches' },
   { id: 'training', label: 'Training' },
 ];
+
+/*
+ * Structured views of the facts above, used by the redesigned pages.
+ * Nothing new is claimed here: every line restates a fact already on the site
+ * (competition, careerStats, honours, coaching, gallery captions) or one Colin
+ * confirmed (men's singles with the Sichuan Provincial Team).
+ */
+
+// Hero credential rail
+export const credentials = [
+  { value: '2023', label: "CCAA Men's Singles National Champion" },
+  { value: 'OCAA', label: "Men's Singles Champion · Player of the Year" },
+  { value: 'Sichuan', label: "Former Provincial Team · Men's Singles" },
+  { value: '5+ yrs', label: 'Coaching in Canada' },
+];
+
+// Career path, from the Sichuan system to Canadian titles and coaching
+export const trajectory = [
+  {
+    step: '01',
+    stage: 'Sichuan, China',
+    title: 'Youth champion',
+    text: 'Multiple-time Sichuan Province Youth Badminton Champion.',
+    image: '/media/frontcourt.webp',
+    imageAlt: 'Colin Zhou lunging for a shuttle at the front court',
+    width: 639,
+    height: 960,
+  },
+  {
+    step: '02',
+    stage: 'Sichuan Provincial Team',
+    title: "Provincial team · men's singles",
+    text: "Competed as a men's singles player for the Sichuan Provincial Team, inside China's professional training system.",
+    image: '/media/jump-smash.webp',
+    imageAlt: 'Colin Zhou mid-air in a jump smash',
+    width: 1170,
+    height: 775,
+  },
+  {
+    step: '03',
+    stage: 'Ontario, Canada',
+    title: 'OCAA Champion & Player of the Year',
+    text: "Men's Singles Champion in the Ontario Colleges Athletic Association, with Player of the Year and Regional All-Star awards.",
+    image: '/media/ocaa-ceremony.webp',
+    imageAlt: 'Colin Zhou receiving an award at the OCAA ceremony',
+    width: 863,
+    height: 1400,
+  },
+  {
+    step: '04',
+    stage: 'Canada · 2023',
+    title: 'CCAA National Champion',
+    text: "2023 Men's Singles National Champion in the Canadian Collegiate Athletic Association, ranked 1st nationally.",
+    image: '/media/national-champion.webp',
+    imageAlt: 'Colin Zhou with the 2023 CCAA national championship banner',
+    width: 933,
+    height: 1400,
+  },
+  {
+    step: '05',
+    stage: 'Coaching in Canada',
+    title: 'Senior coach',
+    text: 'Over 5 years of coaching, 10+ Canadian national-level players trained (U13–U19), and training alongside Canadian Olympic athletes.',
+    image: '/media/coach-poster.webp',
+    imageAlt: 'Colin Zhou, senior badminton coach, holding his championship medal',
+    width: 1050,
+    height: 1400,
+  },
+];
+
+// Competition record, shown as a results table
+export const record = [
+  { event: "CCAA Men's Singles", result: 'National Champion', level: 'National · Canada', year: '2023', top: true },
+  { event: 'CCAA National Ranking', result: '1st', level: 'National · Canada', year: '2023' },
+  { event: "OCAA Men's Singles", result: 'Champion', level: 'Provincial · Ontario' },
+  { event: 'OCAA Awards', result: 'Player of the Year · Regional All-Star', level: 'Provincial · Ontario' },
+  { event: 'Sichuan Provincial Team', result: "Men's singles player", level: 'Provincial · China' },
+  { event: 'Sichuan Province Youth', result: 'Multiple-time Champion', level: 'Provincial · China' },
+];
+
+// Who the coaching is for (from the Training page copy and coaching record)
+export const levels = [
+  {
+    tag: 'Foundations',
+    title: 'Beginners',
+    text: 'Master the basics with proper technique first, then build speed and power on top of it.',
+  },
+  {
+    tag: 'Competitive juniors',
+    title: 'U13–U19 players',
+    text: 'The age range of the 10+ Canadian national-level players Colin has trained.',
+  },
+  {
+    tag: 'Performance',
+    title: 'Advanced players',
+    text: 'Refine your competitive edge: tactics, decision-making and match toughness.',
+  },
+];
+
+// Technique topics used to tag and filter teaching videos
+export const topics = [
+  { id: 'all', label: 'All topics' },
+  { id: 'footwork', label: 'Footwork' },
+  { id: 'attack', label: 'Smash & attack' },
+  { id: 'defence', label: 'Defence' },
+  { id: 'net', label: 'Net play' },
+  { id: 'conditioning', label: 'Conditioning' },
+];
+
+const topicById = {
+  'jfyaLvh-0Nc': 'footwork',
+  XpX97WJzGpw: 'attack',
+  lWfaT717nis: 'defence',
+  'dGH-9FRz5ko': 'net',
+  awVeUT3e5v0: 'conditioning',
+  WdCB34lKKVk: 'footwork',
+  UsTh8U0_ffc: 'footwork',
+  dI1U_dgleu8: 'footwork',
+  tvgGtUctUI0: 'footwork',
+  ngrFS5SLl7I: 'conditioning',
+  'qp2OHq-Xge8': 'attack',
+};
+
+export const topicOf = (video) => topicById[video.id];
+
+// Full teaching library: lesson videos plus the drill videos filed under highlights
+export const teachingLibrary = [
+  ...trainingVideos,
+  ...highlightVideos.filter((v) => v.category === 'training' && topicById[v.id]),
+];

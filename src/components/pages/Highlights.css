@@ -36,3 +36,71 @@
   gap: var(--space-5);
   margin-bottom: var(--space-7);
 }
+
+/* Toolbar stays reachable while browsing the grid */
+.highlights-toolbar {
+  position: sticky;
+  top: var(--nav-height);
+  z-index: var(--z-sticky);
+  padding-block: var(--space-4);
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.highlights-toolbar .h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  width: 100%;
+}
+
+@media (min-width: 960px) {
+  .highlights-toolbar .h2 {
+    width: auto;
+    margin-right: auto;
+  }
+}
+
+/* Career statistics: scoreboard */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--border-strong);
+}
+
+@media (min-width: 960px) {
+  .stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.stat {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  padding: var(--space-6) var(--space-4) var(--space-5) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 960px) {
+  .stat + .stat {
+    padding-left: var(--space-5);
+    border-left: 1px solid var(--border);
+  }
+}
+
+.stat__value {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 6vw, 5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  color: var(--chalk-lime);
+}
+
+.stat__label {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}

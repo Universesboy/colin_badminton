@@ -1,0 +1,198 @@
+.record {
+  display: grid;
+  gap: var(--space-6);
+  align-items: stretch;
+}
+
+@media (min-width: 960px) {
+  .record {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: var(--space-7);
+  }
+}
+
+.record__feature-wrap {
+  perspective: 1200px;
+}
+
+.record__feature {
+  position: relative;
+  display: block;
+  height: 100%;
+  min-height: 460px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--night-850);
+  box-shadow: var(--shadow-lg);
+  color: #fff;
+}
+
+.record__feature img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+  transform: translateZ(0) scale(1.04);
+}
+
+.record__feature::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 20, 16, 0) 35%, rgba(11, 20, 16, 0.92) 100%);
+}
+
+.record__feature-copy {
+  position: absolute;
+  left: var(--space-5);
+  right: var(--space-5);
+  bottom: var(--space-5);
+  z-index: 2;
+  display: grid;
+  gap: 2px;
+  transform: translateZ(40px);
+}
+
+.record__year {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 8vw, 6.5rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  color: var(--chalk-lime);
+}
+
+.record__feature-event {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: var(--space-2);
+}
+
+.record__feature-result {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.record__feature-level {
+  font-size: var(--fs-small);
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: var(--space-1);
+}
+
+/* Results table — Chalk table pattern */
+.record__table-wrap {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  align-self: center;
+  box-shadow: var(--chalk-shadow-xs);
+}
+
+.record__table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.record__table th,
+.record__table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.record__table thead th {
+  padding-block: 12px;
+  background: var(--surface-sunken);
+  color: var(--text-faint);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.record__table tbody th {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.record__table tbody tr:last-child th,
+.record__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.record__table tbody tr {
+  transition: background-color var(--dur-fast) ease;
+}
+
+.record__table tbody tr:hover {
+  background: color-mix(in srgb, var(--highlight) 10%, transparent);
+}
+
+.record__result {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.record__level {
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.record__tag {
+  display: inline-block;
+  margin-left: var(--space-2);
+  padding: 1px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--chalk-lime-soft);
+  border: 1px solid var(--chalk-lime-border);
+  color: var(--chalk-ink);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 650;
+  vertical-align: 2px;
+}
+
+@media (max-width: 639px) {
+  .record__feature {
+    min-height: 420px;
+  }
+  /* Stack table rows into compact cards on phones */
+  .record__table {
+    min-width: 0;
+  }
+  .record__table thead {
+    display: none;
+  }
+  .record__table tr {
+    display: grid;
+    gap: 2px;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .record__table tbody tr:last-child {
+    border-bottom: 0;
+  }
+  .record__table th,
+  .record__table td {
+    padding: 0;
+    border: 0;
+  }
+  .record__level {
+    font-size: 0.8125rem;
+  }
+}

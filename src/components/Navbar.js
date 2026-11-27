@@ -56,6 +56,9 @@ function Navbar() {
               </li>
             ))}
           </ul>
+          <Link to="/contact" className="btn nav__menu-cta">
+            Train with Colin <Icon name="arrow" />
+          </Link>
         </nav>
 
         <div className="nav__actions">

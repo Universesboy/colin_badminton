@@ -21,7 +21,7 @@ function Highlights() {
 
   return (
     <>
-      <PageHeader eyebrow="Highlights" title="Career Highlights" lead="Championship moments and competitive excellence">
+      <PageHeader eyebrow="Film room" title="Career Highlights" lead="Championship moments and competitive excellence: finals, rallies and training sessions, filed and sortable.">
         <ul className="chip-row highlights-honours" aria-label="Honours">
           {honours.map((h) => (
             <li key={h.label} className="chip">
@@ -71,7 +71,7 @@ function Highlights() {
         </div>
       </section>
 
-      <section className="section section--surface" aria-labelledby="stats-title">
+      <section className="section section--brand highlights-stats" aria-labelledby="stats-title">
         <div className="container">
           <AnimatedSection className="section-head">
             <p className="eyebrow">By the numbers</p>
@@ -82,7 +82,7 @@ function Highlights() {
           <div className="stats">
             {careerStats.map((s, i) => (
               <AnimatedSection key={s.label} className="stat" delay={i * 90}>
-                <span className="stat__value accent-text">{s.value}</span>
+                <span className="stat__value">{s.value}</span>
                 <span className="stat__label">{s.label}</span>
               </AnimatedSection>
             ))}

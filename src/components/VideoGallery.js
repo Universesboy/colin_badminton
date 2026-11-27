@@ -3,10 +3,12 @@ import Icon from './Icon';
 import Modal from './Modal';
 import AnimatedSection from './AnimatedSection';
 import { formatDate, formatDuration, formatViews, statsFor } from './videoStats';
+import { topicOf, topics } from '../data/site';
 import './VideoGallery.css';
 
-export function VideoCard({ video, onOpen, size = 'md', showCategory = false, index = 0 }) {
+export function VideoCard({ video, onOpen, size = 'md', showCategory = false, showTopic = false, index = 0 }) {
   const stats = statsFor(video.id);
+  const topic = showTopic && topics.find((t) => t.id === topicOf(video));
   return (
     <AnimatedSection as="article" className={`video-card video-card--${size}`} delay={(index % 3) * 80}>
       <button
@@ -20,6 +22,7 @@ export function VideoCard({ video, onOpen, size = 'md', showCategory = false, in
           <Icon name="play" size={22} />
         </span>
         {showCategory && <span className="video-card__tag">{video.category}</span>}
+        {topic && <span className="video-card__tag video-card__tag--topic">{topic.label}</span>}
         {video.orientation === 'portrait' && <span className="video-card__format">Short</span>}
         {stats?.duration > 0 && <span className="video-card__duration">{formatDuration(stats.duration)}</span>}
       </button>
@@ -67,13 +70,13 @@ export function VideoPlayerModal({ videos, active, setActive }) {
   );
 }
 
-function VideoGallery({ videos, size, showCategory, className = '' }) {
+function VideoGallery({ videos, size, showCategory, showTopic, className = '' }) {
   const [active, setActive] = useState(null);
   return (
     <>
       <div className={`video-grid ${className}`}>
         {videos.map((video, i) => (
-          <VideoCard key={video.id} video={video} onOpen={setActive} size={size} showCategory={showCategory} index={i} />
+          <VideoCard key={video.id} video={video} onOpen={setActive} size={size} showCategory={showCategory} showTopic={showTopic} index={i} />
         ))}
       </div>
       {active && <VideoPlayerModal videos={videos} active={active} setActive={setActive} />}

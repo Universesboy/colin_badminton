@@ -1,0 +1,214 @@
+.trajectory {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.trajectory__stage {
+  display: none;
+}
+
+.trajectory__list {
+  list-style: none;
+  display: grid;
+  position: relative;
+}
+
+/* The rail: a court line that fills with lime as you progress */
+.trajectory__list::before,
+.trajectory__list::after {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: var(--border);
+}
+
+.trajectory__list::after {
+  background: linear-gradient(180deg, var(--chalk-lime), var(--chalk-lime-hover));
+  transform-origin: top;
+  transform: scaleY(var(--progress));
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+
+.trajectory__step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+}
+
+.trajectory__num {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid var(--border-strong);
+  background: var(--stage-bg);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  transition: background-color var(--dur-base) ease, color var(--dur-base) ease, border-color var(--dur-base) ease,
+    transform var(--dur-slow) var(--ease-spring);
+}
+
+.trajectory__step.is-active .trajectory__num,
+.trajectory__step.is-past .trajectory__num {
+  background: var(--chalk-lime);
+  border-color: var(--chalk-lime);
+  color: var(--chalk-ink);
+}
+
+.trajectory__step.is-active .trajectory__num {
+  transform: scale(1.08);
+  box-shadow: var(--glow-lime);
+}
+
+.trajectory__body {
+  display: grid;
+  gap: var(--space-2);
+  padding-top: 4px;
+  transition: opacity var(--dur-slow) var(--ease-out);
+}
+
+.trajectory__where {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.trajectory__body h3 {
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+.trajectory__body p:not(.trajectory__where) {
+  color: var(--text-muted);
+  max-width: 48ch;
+}
+
+.trajectory__thumb {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: 50% 28%;
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 960px) {
+  .trajectory {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: var(--space-9);
+    align-items: start;
+  }
+
+  .trajectory__stage {
+    display: block;
+    position: sticky;
+    top: calc(var(--nav-height) + var(--space-6));
+    aspect-ratio: 4 / 5;
+    max-height: calc(100vh - var(--nav-height) - var(--space-9));
+    width: 100%;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: var(--stage-surface);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .trajectory__stage img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 28%;
+    opacity: 0;
+    transform: scale(1.08);
+    transition: opacity 700ms var(--ease-out), transform 1.4s var(--ease-out);
+  }
+
+  .trajectory__stage img.is-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .trajectory__stage::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 20, 16, 0) 55%, rgba(11, 20, 16, 0.85) 100%);
+  }
+
+  .trajectory__stage-meta {
+    position: absolute;
+    left: var(--space-5);
+    right: var(--space-5);
+    bottom: var(--space-6);
+    z-index: 1;
+    display: grid;
+    gap: var(--space-1);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .trajectory__stage-step {
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: var(--chalk-lime);
+  }
+
+  .trajectory__meter {
+    position: absolute;
+    left: var(--space-5);
+    right: var(--space-5);
+    bottom: var(--space-5);
+    z-index: 1;
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+  }
+
+  .trajectory__meter span {
+    display: block;
+    height: 100%;
+    background: var(--chalk-lime);
+    transform-origin: left;
+    transform: scaleX(var(--progress));
+    transition: transform var(--dur-slow) var(--ease-out);
+  }
+
+  .trajectory__step {
+    min-height: 46vh;
+    align-content: center;
+    padding-block: var(--space-7);
+  }
+
+  .trajectory__step:not(.is-active) .trajectory__body {
+    opacity: 0.38;
+  }
+
+  .trajectory__thumb {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trajectory__step:not(.is-active) .trajectory__body {
+    opacity: 1;
+  }
+}

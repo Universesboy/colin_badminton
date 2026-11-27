@@ -1,0 +1,344 @@
+{
+  "$description": "Chalk brand ecosystem tokens shared by Coach Chalk (coachchalk.com) and Colin Badminton (colinbadminton.com). Values for the 'chalk' group were read from Coach Chalk's live CSS in Nov 2026. See docs/brand/DESIGN_SYSTEM.md.",
+  "chalk": {
+    "color": {
+      "ink": {
+        "$value": "#1e2a24",
+        "$type": "color",
+        "$description": "Brand: body text and primary fills on light"
+      },
+      "ink-hover": {
+        "$value": "#2c3b33",
+        "$type": "color"
+      },
+      "forest": {
+        "$value": "#1f5c45",
+        "$type": "color",
+        "$description": "Logo tile"
+      },
+      "forest-deep": {
+        "$value": "#133a2c",
+        "$type": "color",
+        "$description": "Brand sections"
+      },
+      "lime": {
+        "$value": "#c8f169",
+        "$type": "color",
+        "$description": "Chalk accent; primary fill on dark"
+      },
+      "lime-hover": {
+        "$value": "#b8e553",
+        "$type": "color"
+      },
+      "lime-soft": {
+        "$value": "#eef6d8",
+        "$type": "color"
+      },
+      "lime-border": {
+        "$value": "#cfe3a0",
+        "$type": "color"
+      },
+      "lime-ink": {
+        "$value": "#3f6a0a",
+        "$type": "color",
+        "$description": "Lime-family text on paper (5.6:1)"
+      },
+      "logo-dot": {
+        "$value": "#c8e86b",
+        "$type": "color"
+      },
+      "paper": {
+        "$value": "#f3f1e7",
+        "$type": "color"
+      },
+      "paper-tint": {
+        "$value": "#f7f8f5",
+        "$type": "color"
+      },
+      "surface": {
+        "$value": "#ffffff",
+        "$type": "color"
+      },
+      "surface-muted": {
+        "$value": "#efede3",
+        "$type": "color"
+      },
+      "border": {
+        "$value": "#e0ddd0",
+        "$type": "color"
+      },
+      "border-strong": {
+        "$value": "#cbc7b6",
+        "$type": "color"
+      },
+      "border-input": {
+        "$value": "#8a8d82",
+        "$type": "color"
+      },
+      "text": {
+        "$value": "{chalk.color.ink}",
+        "$type": "color"
+      },
+      "text-secondary": {
+        "$value": "#4b5650",
+        "$type": "color"
+      },
+      "text-muted": {
+        "$value": "#5e6b64",
+        "$type": "color"
+      },
+      "focus": {
+        "$value": "#1d5fa8",
+        "$type": "color"
+      },
+      "success": {
+        "$value": "#1f7a4d",
+        "$type": "color"
+      },
+      "warning": {
+        "$value": "#9a5b00",
+        "$type": "color"
+      },
+      "danger": {
+        "$value": "#b42318",
+        "$type": "color"
+      },
+      "info": {
+        "$value": "#1d5fa8",
+        "$type": "color"
+      }
+    },
+    "font": {
+      "display": {
+        "$type": "fontFamily",
+        "$value": [
+          "Space Grotesk",
+          "Inter",
+          "PingFang SC",
+          "Noto Sans SC",
+          "system-ui",
+          "sans-serif"
+        ]
+      },
+      "sans": {
+        "$type": "fontFamily",
+        "$value": [
+          "Inter",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "PingFang SC",
+          "Hiragino Sans GB",
+          "Microsoft YaHei",
+          "Noto Sans SC",
+          "system-ui",
+          "sans-serif"
+        ]
+      }
+    },
+    "radius": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "6px"
+      },
+      "control": {
+        "$type": "dimension",
+        "$value": "10px"
+      },
+      "card": {
+        "$type": "dimension",
+        "$value": "14px"
+      },
+      "pill": {
+        "$type": "dimension",
+        "$value": "999px"
+      }
+    },
+    "size": {
+      "control-h": {
+        "$type": "dimension",
+        "$value": "48px"
+      },
+      "control-h-sm": {
+        "$type": "dimension",
+        "$value": "40px"
+      },
+      "content-max": {
+        "$type": "dimension",
+        "$value": "1280px"
+      },
+      "nav-h": {
+        "$type": "dimension",
+        "$value": "64px"
+      }
+    },
+    "space": {
+      "1": {
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "2": {
+        "$type": "dimension",
+        "$value": "8px"
+      },
+      "3": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "4": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "5": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "6": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "7": {
+        "$type": "dimension",
+        "$value": "48px"
+      },
+      "8": {
+        "$type": "dimension",
+        "$value": "64px"
+      },
+      "9": {
+        "$type": "dimension",
+        "$value": "96px"
+      },
+      "10": {
+        "$type": "dimension",
+        "$value": "128px"
+      }
+    },
+    "shadow": {
+      "xs": {
+        "$type": "shadow",
+        "$value": "0 1px 2px rgba(23,32,28,0.04)"
+      },
+      "sm": {
+        "$type": "shadow",
+        "$value": "0 1px 3px rgba(23,32,28,0.1)"
+      },
+      "md": {
+        "$type": "shadow",
+        "$value": "0 12px 32px rgba(23,32,28,0.14), 0 2px 6px rgba(23,32,28,0.06)"
+      },
+      "lg": {
+        "$type": "shadow",
+        "$value": "0 1px 2px rgba(19,58,44,0.06), 0 18px 48px rgba(19,58,44,0.12)"
+      }
+    },
+    "motion": {
+      "duration": {
+        "$type": "duration",
+        "$value": "120ms"
+      },
+      "ease-out": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.16,
+          1,
+          0.3,
+          1
+        ]
+      }
+    },
+    "focus": {
+      "$description": "3px solid {chalk.color.focus}, offset 2px, on every interactive element"
+    }
+  },
+  "colin": {
+    "color": {
+      "night-950": {
+        "$value": "#070d0a",
+        "$type": "color"
+      },
+      "night-900": {
+        "$value": "#0b1410",
+        "$type": "color",
+        "$description": "Stage background"
+      },
+      "night-850": {
+        "$value": "#0f1a15",
+        "$type": "color"
+      },
+      "night-800": {
+        "$value": "#15221c",
+        "$type": "color",
+        "$description": "Stage surface"
+      },
+      "night-700": {
+        "$value": "#1d2e26",
+        "$type": "color"
+      },
+      "night-500": {
+        "$value": "#4c5f55",
+        "$type": "color"
+      },
+      "night-300": {
+        "$value": "#9fb0a6",
+        "$type": "color"
+      },
+      "stage-text": {
+        "$value": "#f1f5ef",
+        "$type": "color"
+      },
+      "stage-muted": {
+        "$value": "#a3b3aa",
+        "$type": "color"
+      },
+      "signal": {
+        "$value": "#e8452c",
+        "$type": "color",
+        "$description": "Colin signature red, small accents only"
+      }
+    },
+    "radius": {
+      "media": {
+        "$type": "dimension",
+        "$value": "24px"
+      }
+    },
+    "motion": {
+      "dur-base": {
+        "$type": "duration",
+        "$value": "280ms"
+      },
+      "dur-slow": {
+        "$type": "duration",
+        "$value": "640ms"
+      },
+      "dur-reveal": {
+        "$type": "duration",
+        "$value": "900ms"
+      },
+      "ease-spring": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.34,
+          1.4,
+          0.64,
+          1
+        ]
+      }
+    },
+    "breakpoint": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "640px"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "960px"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "1200px"
+      }
+    }
+  }
+}

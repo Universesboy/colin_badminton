@@ -1,4 +1,4 @@
-"""Render the shuttle brand mark to favicon.ico and the PWA icons in public/."""
+"""Render the shuttle brand mark (Chalk tile, see docs/brand) to favicon.ico and the PWA icons in public/."""
 from pathlib import Path
 from PIL import Image, ImageDraw
 
@@ -9,14 +9,14 @@ def mark(size):
     s = size / 32
     im = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle([0, 0, size - 1, size - 1], radius=7 * s, fill="#07090c")
-    w = max(1, round(2 * s))
-    tri = [(16 * s, 4.5 * s), (24 * s, 20 * s), (8 * s, 20 * s)]
+    d.rounded_rectangle([0, 0, size - 1, size - 1], radius=8 * s, fill="#1F5C45")
+    w = max(1, round(2.2 * s))
+    tri = [(16 * s, 6.5 * s), (22.6 * s, 19.5 * s), (9.4 * s, 19.5 * s)]
     d.line(tri + [tri[0]], fill="white", width=w, joint="curve")
-    d.line([(16 * s, 4.5 * s), (16 * s, 20 * s)], fill=(255, 255, 255, 150), width=max(1, round(1.3 * s)))
-    d.line([(11.8 * s, 12.3 * s), (20.2 * s, 12.3 * s)], fill=(255, 255, 255, 150), width=max(1, round(1.3 * s)))
-    r = 4 * s
-    d.ellipse([16 * s - r, 24 * s - r, 16 * s + r, 24 * s + r], fill="#e8452c")
+    d.line([(16 * s, 6.5 * s), (16 * s, 19.5 * s)], fill=(255, 255, 255, 150), width=max(1, round(1.3 * s)))
+    d.line([(12.3 * s, 13.5 * s), (19.7 * s, 13.5 * s)], fill=(255, 255, 255, 150), width=max(1, round(1.3 * s)))
+    r = 3.2 * s
+    d.ellipse([16 * s - r, 23.6 * s - r, 16 * s + r, 23.6 * s + r], fill="#C8E86B")
     return im
 
 

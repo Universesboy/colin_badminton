@@ -4,7 +4,15 @@
   overflow: hidden;
 }
 
+.footer {
+  position: relative;
+  background: radial-gradient(60% 50% at 80% 0%, rgba(31, 92, 69, 0.45), transparent 70%), var(--stage-bg);
+}
+
 .footer__cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: grid;
   gap: var(--space-5);
   padding-bottom: var(--space-9);
@@ -14,6 +22,23 @@
 .footer__title {
   font-size: var(--fs-h1);
   max-width: 13ch;
+  letter-spacing: -0.045em;
+}
+
+.footer__court {
+  position: absolute;
+  right: -2%;
+  top: -10%;
+  z-index: -1;
+  width: min(48vw, 520px);
+  color: rgba(200, 241, 105, 0.14);
+  transform: perspective(900px) rotateX(55deg) rotateZ(18deg);
+  pointer-events: none;
+}
+
+.footer__court svg {
+  width: 100%;
+  height: auto;
 }
 
 .footer__cta-actions {
@@ -90,16 +115,17 @@
   place-items: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--stage-line);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--stage-line-strong);
   color: var(--stage-text);
   padding: 0;
   transition: background-color var(--dur-fast) ease, border-color var(--dur-fast) ease;
 }
 
 .footer__socials a:hover {
-  background: var(--smash-500);
-  border-color: var(--smash-500);
+  background: var(--chalk-lime);
+  border-color: var(--chalk-lime);
+  color: var(--chalk-ink);
 }
 
 .footer__base {
