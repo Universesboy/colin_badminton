@@ -116,7 +116,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="section section--surface" aria-labelledby="form-title">
+      <section className="section section--sunken" aria-labelledby="form-title">
         <div className="container contact-form-wrap">
           <AnimatedSection>
             <p className="eyebrow">Message</p>

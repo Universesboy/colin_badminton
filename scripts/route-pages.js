@@ -13,7 +13,9 @@ for (const route of ROUTES) {
   // Point canonical and og:url at the route itself before any script runs
   const html = index
     .replace(`rel="canonical" href="${ORIGIN}/"`, `rel="canonical" href="${ORIGIN}/${route}"`)
-    .replace(`property="og:url" content="${ORIGIN}/"`, `property="og:url" content="${ORIGIN}/${route}"`);
+    .replace(`property="og:url" content="${ORIGIN}/"`, `property="og:url" content="${ORIGIN}/${route}"`)
+    // The hero athlete image is only on the home page
+    .replace(/<link rel="preload" as="image" href="[^"]*athlete-cutout\.webp"[^>]*>/, '');
   fs.writeFileSync(path.join(build, `${route}.html`), html);
 }
 console.log(`Wrote ${ROUTES.length} route pages`);

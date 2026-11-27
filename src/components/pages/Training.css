@@ -39,3 +39,133 @@
 .training-videos-head .section-head {
   margin-bottom: 0;
 }
+
+.training-videos-head {
+  margin-bottom: var(--space-5);
+}
+
+.training-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-7);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Who it's for: a rising ladder rather than three equal cards */
+.levels {
+  list-style: none;
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 840px) {
+  .levels {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: end;
+    gap: var(--space-5);
+  }
+}
+
+.level {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.level__bar {
+  display: flex;
+  gap: 4px;
+  margin-bottom: var(--space-3);
+}
+
+.level__bar::before,
+.level__bar::after,
+.level__bar span {
+  content: '';
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--border);
+}
+
+.level:nth-child(1) .level__bar::before,
+.level:nth-child(2) .level__bar::before,
+.level:nth-child(2) .level__bar span,
+.level:nth-child(3) .level__bar::before,
+.level:nth-child(3) .level__bar span,
+.level:nth-child(3) .level__bar::after {
+  background: var(--chalk-lime);
+}
+
+html:not(.dark-mode) .level:nth-child(1) .level__bar::before,
+html:not(.dark-mode) .level:nth-child(2) .level__bar::before,
+html:not(.dark-mode) .level:nth-child(2) .level__bar span,
+html:not(.dark-mode) .level:nth-child(3) .level__bar::before,
+html:not(.dark-mode) .level:nth-child(3) .level__bar span,
+html:not(.dark-mode) .level:nth-child(3) .level__bar::after {
+  background: var(--chalk-forest);
+}
+
+@media (min-width: 840px) {
+  .level {
+    min-height: calc(200px + var(--lv) * 36px);
+  }
+}
+
+.level__tag {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.level h3 {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.level p {
+  color: var(--text-muted);
+}
+
+.training-flow {
+  margin-top: var(--space-9);
+  display: grid;
+  gap: var(--space-5);
+}
+
+.training-flow__title {
+  font-size: var(--fs-h3);
+}
+
+.training-flow__steps {
+  list-style: none;
+}
+
+.training-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  padding: var(--space-5) var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-strong);
+  background: linear-gradient(120deg, rgba(31, 92, 69, 0.5), rgba(21, 34, 28, 0.6));
+}
+
+.training-cta .lead {
+  color: var(--stage-text);
+  font-weight: 500;
+}

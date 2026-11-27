@@ -75,12 +75,18 @@ h4 {
   font-weight: 700;
   line-height: var(--lh-tight);
   letter-spacing: var(--tracking-display);
+}
+
+h1,
+h2 {
   text-transform: uppercase;
 }
 
 h3,
 h4 {
   line-height: var(--lh-snug);
+  letter-spacing: -0.015em;
+  font-weight: 600;
 }
 
 p {
@@ -88,14 +94,14 @@ p {
 }
 
 :focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 3px;
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
   border-radius: 4px;
 }
 
 ::selection {
-  background: var(--smash-500);
-  color: #fff;
+  background: var(--chalk-lime);
+  color: var(--chalk-ink);
 }
 
 .sr-only {
@@ -116,9 +122,9 @@ p {
   top: -100px;
   z-index: calc(var(--z-menu) + 1);
   padding: var(--space-3) var(--space-4);
-  background: var(--accent);
-  color: var(--on-accent);
-  border-radius: var(--radius-sm);
+  background: var(--chalk-lime);
+  color: var(--chalk-ink);
+  border-radius: var(--radius-md);
   font-weight: 600;
 }
 

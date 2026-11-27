@@ -40,7 +40,7 @@ function PageHeader({ eyebrow, title, lead, children }) {
         {eyebrow && <p className="eyebrow">{eyebrow}</p>}
         <h1>{title}</h1>
         {lead && <p className="lead">{lead}</p>}
-        {children}
+        {children && <div className="page-header__extra">{children}</div>}
       </div>
     </section>
   );

@@ -1,78 +1,72 @@
-.home-stats {
-  padding-bottom: var(--space-8);
-}
-
-/* The athlete */
-.home-athlete__grid {
+/* Brand statement */
+.home-intro__grid {
   display: grid;
-  gap: var(--space-8);
-  align-items: center;
+  gap: var(--space-7);
 }
 
 @media (min-width: 960px) {
-  .home-athlete__grid {
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  .home-intro__grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
     gap: var(--space-9);
+    align-items: end;
   }
 }
 
-.home-athlete__photo {
-  aspect-ratio: 2 / 3;
-  max-width: 520px;
-  width: 100%;
+.home-intro__head {
+  display: grid;
+  gap: var(--space-5);
 }
 
-.home-athlete__photo img {
-  object-position: 60% 40%;
+.home-intro__title {
+  font-size: clamp(2.75rem, 6.6vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
 }
 
-.home-athlete__copy {
+.home-intro__body {
   display: grid;
   gap: var(--space-6);
-  align-content: start;
 }
 
-.home-athlete__copy .h2 {
-  margin-top: var(--space-4);
-  max-width: 12ch;
-}
-
-.honour-list {
-  list-style: none;
-  border-top: 1px solid var(--border);
-}
-
-.honour {
+.home-intro__stats {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--space-4);
-  padding-block: var(--space-5);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--border-strong);
+}
+
+.home-intro__stat {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+  padding: var(--space-4) var(--space-4) var(--space-4) 0;
   border-bottom: 1px solid var(--border);
 }
 
-.honour__icon {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--accent);
+.home-intro__stat:nth-child(even) {
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--border);
 }
 
-.honour h3 {
-  font-size: 1.5rem;
+.home-intro__stat dd {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
 }
 
-.honour p {
-  color: var(--text-muted);
+.home-intro__stat dt {
   font-size: var(--fs-small);
-  margin-top: 2px;
+  color: var(--text-muted);
 }
 
-.home-athlete .link-arrow {
-  justify-self: start;
+/* Career path */
+.home-path {
+  overflow: clip;
+}
+
+.home-path .h2 {
+  max-width: 16ch;
 }
 
 /* Featured videos */
@@ -93,21 +87,80 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-6);
-  margin-top: var(--space-8);
+  margin-top: var(--space-7);
 }
 
-.section--stage .link-arrow {
-  color: var(--stage-text);
+/* The coach */
+.home-coach {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
 }
 
-/* Award strip: a row on desktop, a swipeable rail on small screens */
+@media (min-width: 960px) {
+  .home-coach {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: var(--space-9);
+  }
+}
+
+.home-coach__photo-wrap {
+  perspective: 1200px;
+}
+
+.home-coach__photo {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  max-width: 460px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.home-coach__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+.home-coach__copy {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.home-coach__copy .h2 {
+  margin-top: var(--space-4);
+}
+
+.section--brand .timeline__item::before {
+  box-shadow: 0 0 0 4px var(--chalk-forest-deep);
+}
+
+.home-teaching {
+  list-style: none;
+  margin-top: var(--space-9);
+}
+
+/* Podium */
+.home-gallery__more {
+  justify-self: start;
+}
+
+@media (min-width: 960px) {
+  .home-gallery__more {
+    justify-self: end;
+  }
+}
+
 .home-strip {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(240px, 1fr);
   gap: var(--space-4);
   padding-inline: var(--gutter);
-  max-width: calc(var(--max-width));
+  max-width: var(--max-width);
   margin-inline: auto;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -129,36 +182,12 @@
   scroll-snap-align: start;
 }
 
-/* The coach */
-.home-coach {
-  display: grid;
-  gap: var(--space-8);
-  align-items: start;
+.home-strip__item img {
+  transition: transform var(--dur-slow) var(--ease-out);
 }
 
-@media (min-width: 960px) {
-  .home-coach {
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-    gap: var(--space-9);
+@media (hover: hover) {
+  .home-strip__item:hover img {
+    transform: scale(1.04);
   }
-}
-
-.home-coach__copy {
-  display: grid;
-  gap: var(--space-7);
-}
-
-.home-coach__photo {
-  aspect-ratio: 3 / 4;
-  width: 100%;
-  max-width: 460px;
-  justify-self: end;
-}
-
-.home-coach__photo img {
-  object-position: 50% 20%;
-}
-
-.home-teaching {
-  margin-top: var(--space-9);
 }

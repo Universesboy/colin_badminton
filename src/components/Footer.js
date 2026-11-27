@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 import Icon from './Icon';
 import Logo from './Logo';
+import { CourtLines } from './PageHeader';
 import { contact, socials } from '../data/site';
 
 function Footer() {
@@ -10,9 +11,12 @@ function Footer() {
     <footer className="footer section--stage">
       <div className="container">
         <div className="footer__cta">
+          <div className="footer__court" aria-hidden="true">
+            <CourtLines />
+          </div>
           <p className="eyebrow">Coaching in English &amp; Chinese</p>
           <h2 className="footer__title">
-            Train with a <span className="accent-text">national champion</span>
+            Train with a <span className="mark">national champion</span>
           </h2>
           <div className="footer__cta-actions">
             <Link to="/contact" className="btn">
